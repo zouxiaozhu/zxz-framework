@@ -21,6 +21,7 @@ class EnvHandler implements HandleInterface{
 
     public function register(App $app)
     {
+
         $this->loadEnv($app);
         App::$container->setSingle('env', $this);
     }
@@ -40,12 +41,13 @@ class EnvHandler implements HandleInterface{
 
     public function loadEnv(App $app)
     {
-        $env_path = $app->rootPath. DIRECTORY_SEPARATOR.'env';
-        if(!realpath($env_path)){
-            throw ZxzHttpException('load env fail', 500);
+        $env_path = $app->rootPath. DIRECTORY_SEPARATOR.'.env';
+         if(!realpath($env_path)){
+            throw new ZxzHttpException(500, 'env not exist');
         }
 
-        $env = parse_ini_file($app->rootPath. DIRECTORY_SEPARATOR.'env', true);
+        $env = parse_ini_file($env_path, true);
         $this->envParams = array_merge($_ENV, $env);
+
     }
 }

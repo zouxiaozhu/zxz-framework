@@ -15,11 +15,12 @@ class App {
     private $rootPath;              // 需要用魔术方法获取
     private $handlesList = [];      //框架加载流程一系列处理类集合
     public static $app;
+    public static $container;
 
     public function __construct($root, $loader)    {
 
 
-//        $this->runningMode = getenv('EASY_MODE');
+        $this->runningMode = php_sapi_name();
          // 根目录
 
          // echo getenv('EASY_MODE');die;
@@ -29,7 +30,15 @@ class App {
         Load::register($this); // 引入框架路径 加载自动加载文件
 
         self::$app = $this;
+
         self::$container = new Container();
+    }
+
+    public function run(Closure $closure){
+        foreach ($this->handlesList as $handle){
+            $handle()->register($this);
+        }
+
     }
 
     public function __get($name = '')
@@ -47,6 +56,4 @@ class App {
     {
         $this->handlesList[] = $handle;
     }
-
-
 }

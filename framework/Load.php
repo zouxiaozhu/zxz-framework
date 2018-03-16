@@ -18,16 +18,46 @@ class Load {
         ];
 
         spl_autoload_register(['Framework\Load', 'autoload']);
-        require_once $app->rootPath . DIRECTORY_SEPARATOR .'autoload.php' ;
+        require_once $app->rootPath . DIRECTORY_SEPARATOR .'/vendor/autoload.php' ;
+
 //        $config = new Config();
 
 
     }
 
-    public function autoload($class)
+    public static function autoload($class)
     {
-        echo $class;die;
+        $class_info = explode('\\', $class);
+        $class_name = array_pop($class_info);
+
+        $class_info = array_map(function($value){
+            return (strtolower($value));
+        }, $class_info);
+
+        $framework_path = self::$namespaceMap['Framework'];
+        $class_path = $framework_path . DIRECTORY_SEPARATOR
+            .join('/',$class_info). DIRECTORY_SEPARATOR;
+
+        $class_real_path = $class_path . $class_name . '.php';
+
+        foreach (glob($class_path. '*') as $file){
+            if(strtolower($class_real_path) == strtolower($file)){
+                $class_real_path = $file;
+            }
+        }
+
+
+        if(!file_exists($class_real_path)){
+
+            throw new ZxzHttpException('400', $class_path.'not exist');
+            return ;
+        }
+
+        self::$namespaceMap[$class] = $class_real_path;
+
+        require $class_real_path;
     }
+
 
 
 
