@@ -69,10 +69,30 @@ class ZxzHttpException extends Exception{
         ];
 
         // log
-        App::$container->getSingle('logger')->write($data);
+        App::$container->getSingle('log')->write($data);
 
         // response
         header('Content-Type:Application/json; Charset=utf-8');
         die(json_encode($data, JSON_UNESCAPED_UNICODE));
+    }
+
+    public static function error($e)
+    {
+        $data = [
+            '__coreError' => [
+                'code' => 500,
+                'message' => $e,
+                'infomations' => [
+                    'file' => $e['file'],
+                    'line' => $e['line'],
+                ]
+            ]
+        ];
+
+        // log
+        App::$container->getSingle('log')->write($data);
+
+        header('Content-Type:Application/json; Charset=utf-8');
+        die(json_encode($data));
     }
 }

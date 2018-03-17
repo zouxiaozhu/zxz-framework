@@ -1,0 +1,399 @@
+array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz//not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'RouterHandle',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 35,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'RouterHandle',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 39,
+          'function' => '{closure}',
+          'args' => 
+          array (
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz//not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'RouterHandle',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 35,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'RouterHandle',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 39,
+          'function' => '{closure}',
+          'args' => 
+          array (
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 58,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 58,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 58,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => '400',
+    'message' => '/home/zouxiaozhu/project/phpcode/zxz/framework/facades/not exist Bad Request',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/Load.php',
+      'line' => 52,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'function' => 'autoload',
+          'class' => 'Framework\\Load',
+          'type' => '::',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 58,
+          'function' => 'spl_autoload_call',
+          'args' => 
+          array (
+            0 => 'Framework\\Facades\\Config',
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 33,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)

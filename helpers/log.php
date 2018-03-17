@@ -8,6 +8,6 @@
 
 if(!function_exists('logMessage')){
     function logMessage($controller, $method, $message, $path){
-        return 111;
+        echo 111;
     }
 }

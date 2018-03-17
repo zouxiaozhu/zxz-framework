@@ -16,7 +16,7 @@ class App {
     private $handlesList = [];      //框架加载流程一系列处理类集合
     public static $app;
     public static $container;
-
+    public $notOutput = false;
     public function __construct($root, $loader)    {
 
 
@@ -38,7 +38,6 @@ class App {
         foreach ($this->handlesList as $handle){
             $handle()->register($this);
         }
-
     }
 
     public function __get($name = '')
@@ -55,5 +54,14 @@ class App {
     public function load(Closure $handle)
     {
         $this->handlesList[] = $handle;
+    }
+
+    public function response(Closure $closure)
+    {
+        if ($this->notOutput === true) {
+            return;
+        }
+        $this->response_data =1;
+        $closure()->success($this->response_data);
     }
 }

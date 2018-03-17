@@ -23,6 +23,7 @@ class EnvHandler implements HandleInterface{
     {
 
         $this->loadEnv($app);
+
         App::$container->setSingle('env', $this);
     }
 
@@ -35,7 +36,7 @@ class EnvHandler implements HandleInterface{
     public function env($key = ''){
 
         if (!$key) return '';
-        return array_key_exists($key, $this->envParams) ? $this->envParams[$key] : '';
+        return array_key_exists($key, $this->envParams) ? $this->envParams[$key] : null;
 
     }
 

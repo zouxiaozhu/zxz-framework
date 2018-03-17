@@ -46,9 +46,7 @@ class Load {
             }
         }
 
-
         if(!file_exists($class_real_path)){
-
             throw new ZxzHttpException('400', $class_path.'not exist');
             return ;
         }

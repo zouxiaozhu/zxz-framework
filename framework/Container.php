@@ -25,36 +25,53 @@ class Container{
     }
 
     // 获取对象的实例
-    public function get($alias = '')
+    public function getSingle($alias = '')
     {
-        if (!array_key_exists($alias, $this->classMap)){
+        if (!array_key_exists($alias, $this->instanceMap)){
             throw new ZxzHttpException('404', 'Class '.$alias);
         }
 
-        if (is_callable($this->classMap[$alias])){
-            return $this->classMap[$alias]();
+        if (is_callable($this->instanceMap[$alias])){
+            return $this->instanceMap[$alias]();
         }
 
-        if (is_object($this->classMap[$alias])){
-            return $this->classMap[$alias];
+        if (is_object($this->instanceMap[$alias])){
+            return $this->instanceMap[$alias];
         }
     }
 
     public function setSingle($alias = '', $object = '')
     {
-        if (is_callable($alias) || is_object($alias)) {
-            $instance = is_callable($alias) ? $alias() : $alias;
-            var_export(111);die;
+
+//        if (is_callable($alias) || is_object($alias)) {
+//            var_export($alias);
+//            $instance = is_callable($alias) ? $alias() : $alias;
+//
+//
+//            $className = get_class($instance);
+//
+//            if (array_key_exists($className, $this->instanceMap)) {
+//                return $this->instanceMap[$alias];
+//            }
+//            $this->instanceMap[$className] = $instance;
+//
+//            return $this->instanceMap[$className];
+//        }
+        if (!is_string($alias) && is_callable($alias)) {
+            $instance  = $alias();
             $className = get_class($instance);
-var_export($className);die;
+            $this->instanceMap[$className] = $instance;
+            return $instance;
+        }
+
+        if (is_object($alias)) {
+            $className = get_class($alias);
             if (array_key_exists($className, $this->instanceMap)) {
                 return $this->instanceMap[$alias];
             }
-            $this->instanceMap[$className] = $instance;
-            var_export($this->instanceMap);die;
+            $this->instanceMap[$className] = $alias;
             return $this->instanceMap[$className];
         }
-
         if (is_callable($object)) {
             if (empty($alias)) {
                 return new ZxzHttpException(
@@ -73,6 +90,7 @@ var_export($className);die;
             if(empty($object)){
                 throw new ZxzHttpException('403', 'empty'.get_class($object));
             }
+
             $this->instanceMap[$alias] = $object;
             return $object;
         }

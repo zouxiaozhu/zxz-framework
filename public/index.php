@@ -7,8 +7,17 @@
  */
 
 
+
 // 载入框架运行文件
-define('ROOT_PATH', dirname(dirname(__FILE__)));
+//define('ROOT_PATH', dirname(dirname(__FILE__)));
+define('ROOT_PATH', getcwd().'/../');
+define('DEBUG_MODE', true);
+
+if (DEBUG_MODE){
+    ini_set('display_errors', 'on');
+}else{
+    ini_set('display_errors', 'off');
+}
 
 // 文件间隔符
 !defined('DIRECTORY_SEPARATOR') && define('DIRECTORY_SEPARATOR', '/');
@@ -16,6 +25,7 @@ define('ROOT_PATH', dirname(dirname(__FILE__)));
 //公共文件入口
 define('PUBLIC_PATH', dirname(__DIR__));
 //
+define('RESOURCE_PATH',ROOT_PATH.DIRECTORY_SEPARATOR.'resource');
 define('FRAMEWORK_PATH', ROOT_PATH.DIRECTORY_SEPARATOR.'framework');
 // 应用路径
 define('APP_PATH', ROOT_PATH.DIRECTORY_SEPARATOR.'app');
