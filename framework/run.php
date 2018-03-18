@@ -30,18 +30,19 @@ try{
         return new \Framework\Handlers\LogHandler();
     });
 
-//    $app->load(function () {
-//        // 加载路由机制 Loading route handle
-//        return new RouterHandle();
-//    });
+    $app->load(function () {
+        // 加载路由机制 Loading route handle
+        return new \Framework\Router();
+    });
 
     /**
      * 启动应用
      *
      * Start framework
      */
+
     $app->run(function () use ($app) {
-        return new Request($app);
+        return new \Framework\Request($app);
     });
 //    \Framework\Facades\Config::get();
     //var_export(\Framework\App::$container);die;
@@ -55,14 +56,14 @@ try{
      *
      * End
      */
-    $ret = \Framework\Facades\Config::get();
+//  \Framework\Facades\Config::get();
 
-    $app->response(function () {
-        return new \Framework\Response();
-    });
+//    $app->response(function () {
+//        return new \Framework\Response();
+//    });
 
 
 
 }catch (\Framework\Exceptions\ZxzHttpException $e){
-    $e->response();
+//    $e->response();
 }

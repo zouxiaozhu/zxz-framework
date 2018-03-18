@@ -18,6 +18,7 @@ class ConfigHandler implements HandleInterface {
     public function register(App $app)
     {
         $this->loadConfig($app);
+
         App::$container->setSingle('config', $this);
         $this->loadHelper($app);
 
@@ -27,8 +28,9 @@ class ConfigHandler implements HandleInterface {
 
         $configPath = $app->rootPath. DIRECTORY_SEPARATOR.'config/*.php';
         $configItems = [];
-        foreach (glob($configPath.'/*.php')  as $file){
-            $configItems =array_merge($configItems, include_once $file);
+        foreach (glob($configPath)  as $file){
+
+            $configItems =array_merge($configItems, require_once $file);
         }
 
         $this->configParams = $configItems;
@@ -43,8 +45,15 @@ class ConfigHandler implements HandleInterface {
         require_once FRAMEWORK_PATH.DIRECTORY_SEPARATOR.'helpers.php';
     }
 
-    public function get()
+    public function __get($name = '')
     {
-        echo 11;
+        return $this->$name;
     }
+
+
+    public function __set($name = '', $value = '')
+    {
+        $this->$name = $value;
+    }
+
 }

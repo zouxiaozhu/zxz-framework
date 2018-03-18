@@ -34,10 +34,13 @@ class App {
         self::$container = new Container();
     }
 
-    public function run(Closure $closure){
+    public function run(Closure $request){
+        self::$container->setSingle('request',$request);
+
         foreach ($this->handlesList as $handle){
             $handle()->register($this);
         }
+
     }
 
     public function __get($name = '')

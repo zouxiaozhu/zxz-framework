@@ -5,7 +5,7 @@
  * Date: 18-3-15
  * Time: 下午11:33
  */
-
+namespace Framework;
 class Request{
     /**
      * 请求header参数
@@ -164,6 +164,7 @@ class Request{
      */
     public function get($name = '', $default = '')
     {
+
         if(!isset($this->getParams[$name])){
             return null;
         }

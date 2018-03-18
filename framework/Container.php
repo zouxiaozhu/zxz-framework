@@ -25,19 +25,25 @@ class Container{
     }
 
     // 获取对象的实例
-    public function getSingle($alias = '')
+    public function getSingle($alias = '',$closure = '')
     {
         if (!array_key_exists($alias, $this->instanceMap)){
             throw new ZxzHttpException('404', 'Class '.$alias);
         }
 
-        if (is_callable($this->instanceMap[$alias])){
-            return $this->instanceMap[$alias]();
+        if (array_key_exists($alias, $this->instanceMap)) {
+            $instance = $this->instanceMap[$alias];
+            if (is_callable($instance)) {
+
+                return $this->instanceMap[$alias] = $instance();
+            }
+            return $instance;
         }
 
-        if (is_object($this->instanceMap[$alias])){
-            return $this->instanceMap[$alias];
+        if (is_callable($closure)) {
+            return $this->instanceMap[$alias] = $closure();
         }
+
     }
 
     public function setSingle($alias = '', $object = '')
@@ -57,6 +63,8 @@ class Container{
 //
 //            return $this->instanceMap[$className];
 //        }
+
+
         if (!is_string($alias) && is_callable($alias)) {
             $instance  = $alias();
             $className = get_class($instance);
@@ -82,8 +90,8 @@ class Container{
                 return $this->instanceMap[$alias];
             }
 
-            $this->instanceMap[$alias] = $object();
-            return $object();
+            $this->instanceMap[$alias] = $object;
+            return $object;
         }
 
         if(is_object($object)){
