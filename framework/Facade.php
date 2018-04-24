@@ -10,8 +10,6 @@ use Framework\Exceptions\ZxzHttpException;
 
 class Facade {
 
-//    protected static function getFacadeAccessor();
-//
     public static function __callStatic($method, $args){
 
         $alias = static::getFacadeAccessor(); // config
@@ -24,6 +22,7 @@ class Facade {
     public static  function getInstance($alias){
 
         $instance_map = App::$container->instanceMap;
+
         if(!array_key_exists($alias, $instance_map)){
             throw new ZxzHttpException(400, $alias.' instance not exist');
         }

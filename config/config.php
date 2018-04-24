@@ -13,6 +13,6 @@ return [
 
 
     ],
-    'application_folder' => 'app'
-
+    'application_folder' => 'app',
+    'controller_folder'=>'controller'
 ];

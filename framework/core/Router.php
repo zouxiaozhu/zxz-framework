@@ -8,6 +8,7 @@
 namespace Framework\Core;
 
 use Framework\App;
+use Framework\Exceptions\ZxzHttpException;
 
 class Router{
     private $routeStrategyMap = [
@@ -23,6 +24,7 @@ class Router{
 
         $this->request = App::$container->getSingle('request');
         $this->config = App::$container->getSingle('config');
+
         $this->app            = $app;
         $this->requestUri = $this->request->server('REQUEST_URI');
         $configParams = ($this->config->configParams);
@@ -33,13 +35,11 @@ class Router{
         // 设置默认操作 set default action
         $this->action     = $configParams['default_action'] ? : 'index';
 
-
-
         $this->strategyJudge();
 
         (new $this->routeStrategyMap[$this->routeStrategy])->router($this);
         $this->start();
-//        $this->start();
+
     }
     protected function class(){
 
@@ -51,8 +51,45 @@ class Router{
 
     protected function start()
     {
-        $this->class();
-        var_export($this->classPath);die;
+        $moudle_dir = CONTROLLER_PATH.SEPARATOR.$this->module;
+
+        if(!is_dir($moudle_dir) || !is_readable($moudle_dir)){
+            throw new ZxzHttpException(404,
+                sprintf('DIR %s NOT FOUND OR PERMISSION DENIED', $this->module));
+        }
+
+        $file_path = CONTROLLER_PATH.SEPARATOR.$this->module.SEPARATOR.ucfirst($this->controller).PHP_FILE;
+
+        $uc = explode('/',$this->module.SEPARATOR.ucfirst($this->controller));
+        $uc = array_map(function($va){
+            return ucfirst($va);
+        }, $uc);
+        $uc = implode('\\', $uc);
+
+        $namespace_path = '\App\Controllers\\'.$uc ;
+
+        if(!file_exists($file_path))
+       {
+            throw new ZxzHttpException(404,
+                sprintf('FILE %s NOT FOUND OR PERMISSION DENIED', $this->controller));
+        }
+
+        $obj = new $namespace_path();
+
+        if(!method_exists($obj, $this->action)){
+            throw new ZxzHttpException(404,
+                sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
+        }
+
+
+
+
+
+
+//        $router->module = $matches[0];
+//        $router->controller = $matches[1];
+//        $router->action = $matches[2];
+        echo $this->classPath;die;
     }
 
     public function strategyJudge()
@@ -79,15 +116,6 @@ class Router{
 
         $this->routeStrategy = 'pathinfo';
     }
-
-
-
-
-
-
-
-
-
 
     public function __get($name = '')
     {

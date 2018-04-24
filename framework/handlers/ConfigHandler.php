@@ -43,10 +43,12 @@ class ConfigHandler implements HandleInterface {
         }
 
         require_once FRAMEWORK_PATH.DIRECTORY_SEPARATOR.'helpers.php';
+        return true;
     }
 
     public function __get($name = '')
     {
+        var_dump(debug_backtrace());
         return $this->$name;
     }
 

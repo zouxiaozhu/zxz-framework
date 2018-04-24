@@ -14,9 +14,7 @@ class RouterHandler implements HandleInterface {
 
     public function register(App $app){
         // 初始化路由模块入口类
-        $router = new Router;
+        $router = new Router();
         $router->init($app);
     }
-
-
 }

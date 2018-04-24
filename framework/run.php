@@ -1,6 +1,4 @@
 <?php
-
-
 /**
  * Created by PhpStorm.
  * User: zouxiaozhu
@@ -42,9 +40,10 @@ try{
      */
 
     $app->run(function () use ($app) {
+
         return new \Framework\Request($app);
     });
-//    \Framework\Facades\Config::get();
+
     //var_export(\Framework\App::$container);die;
 
     /**
@@ -65,5 +64,5 @@ try{
 
 
 }catch (\Framework\Exceptions\ZxzHttpException $e){
-//    $e->response();
+    $e->response();
 }

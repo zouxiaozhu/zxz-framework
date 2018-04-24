@@ -38,6 +38,7 @@ class App {
         self::$container->setSingle('request',$request);
 
         foreach ($this->handlesList as $handle){
+
             $handle()->register($this);
         }
 
@@ -64,7 +65,7 @@ class App {
         if ($this->notOutput === true) {
             return;
         }
-        $this->response_data =1;
+        $this->response_data =　1;
         $closure()->success($this->response_data);
     }
 }

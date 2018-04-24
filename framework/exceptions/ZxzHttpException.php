@@ -51,7 +51,6 @@ class ZxzHttpException extends Exception{
 
     /**
      * rest 风格http响应
-     *
      * @return json
      */
     public function response()

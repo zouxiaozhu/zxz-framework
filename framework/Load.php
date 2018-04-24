@@ -27,9 +27,10 @@ class Load {
 
     public static function autoload($class)
     {
+
         $class_info = explode('\\', $class);
         $class_name = array_pop($class_info);
-
+//if(strtolower($class_name) == 'bb'){echo 11;die;    }
         $class_info = array_map(function($value){
             return (strtolower($value));
         }, $class_info);
