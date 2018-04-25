@@ -9,18 +9,17 @@ namespace Framework;
 class Response{
     public function __construct()
     {
-        // code ...
     }
 
     public function success($response = '22', $code = 200, $message = 'success')
     {
         header('Content-Type:Application/json; Charset=utf-8');
-        die(json_encode([
+        echo json_encode([
             'code'    => $code,
             'message' => $message,
-            'result'  => $response
-        ],JSON_UNESCAPED_UNICODE)
-        );
+            'result'  => $response,
+            'status' => true
+        ],JSON_UNESCAPED_UNICODE);
     }
 
     public function error($response = [], $code = 500, $message = 'error')
@@ -29,10 +28,10 @@ class Response{
         $ret = json_encode([
             'code'    => $code,
             'message' => $message,
-            'result'  => $response
+            'result'  => $response,
+            'status' => false
         ],JSON_UNESCAPED_UNICODE);
 
-        echo $ret;die;
     }
 
     public function __get($name = '')

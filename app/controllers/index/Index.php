@@ -3,17 +3,16 @@
  * Created by PhpStorm.
  * User: zouxiaozhu
  * Date: 18-4-25
- * Time: 上午12:08
+ * Time: 下午11:56
  */
-namespace App\Controllers\Aa;
-class Bb{
+namespace App\Controllers\Index;
+class Index {
     public function __construct()
     {
-        
     }
 
     public function index()
     {
-        echo 111;die;
+        return 'its index';
     }
 }

@@ -3,7 +3,7 @@ return [
 
     'default_module' => '',
 
-    'default_controller' => 'IndexController',
+    'default_controller' => 'Index',
 
     'default_action' => 'index',
 ];

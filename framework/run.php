@@ -55,11 +55,10 @@ try{
      *
      * End
      */
-//  \Framework\Facades\Config::get();
 
-//    $app->response(function () {
-//        return new \Framework\Response();
-//    });
+    $app->response(function () {
+        return new \Framework\Response();
+    });
 
 
 

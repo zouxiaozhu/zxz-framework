@@ -31,7 +31,7 @@ class Router{
 
         $this->module     = $configParams['default_module'] ? : 'index';
         // 设置默认控制器 set default controller
-        $this->controller = $configParams['default_controller'] ? : 'IndexController';
+        $this->controller = $configParams['default_controller'] ? : 'Index';
         // 设置默认操作 set default action
         $this->action     = $configParams['default_action'] ? : 'index';
 
@@ -41,7 +41,7 @@ class Router{
         $this->start();
 
     }
-    protected function class(){
+    protected function classv(){
 
         $controller = ucfirst($this->controller);
         $folder = ucfirst($this->config->config['application_folder']);
@@ -51,6 +51,7 @@ class Router{
 
     protected function start()
     {
+
         $moudle_dir = CONTROLLER_PATH.SEPARATOR.$this->module;
 
         if(!is_dir($moudle_dir) || !is_readable($moudle_dir)){
@@ -80,16 +81,8 @@ class Router{
             throw new ZxzHttpException(404,
                 sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
         }
-
-
-
-
-
-
-//        $router->module = $matches[0];
-//        $router->controller = $matches[1];
-//        $router->action = $matches[2];
-        echo $this->classPath;die;
+        $ret = $obj->{$this->action}();
+        $this->app->response_data = $ret;
     }
 
     public function strategyJudge()
@@ -124,6 +117,7 @@ class Router{
 
     public function __set($name = '', $value = '')
     {
+
         $this->$name = $value;
     }
 }

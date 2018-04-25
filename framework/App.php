@@ -65,7 +65,7 @@ class App {
         if ($this->notOutput === true) {
             return;
         }
-        $this->response_data =　1;
+
         $closure()->success($this->response_data);
     }
 }

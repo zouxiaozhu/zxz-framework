@@ -24,22 +24,26 @@ class Pathinfo{
 
         /* 自定义路由怕断 */
         $matches = explode('/', $matches[1][0]);
+        $matches = array_filter($matches);
 
-        switch ($size = sizeof($matches)) {
-            case $size >= 3:
-                $module = array_slice($matches, 0 ,$size-2);
-                $router->module = strtolower(trim(join('/', $module), '/'));
-                $router->controller = ucfirst($matches[$size-2]);
-                $router->action = $matches[$size-1];
+        $size = sizeof($matches);
+
+        switch ($size) {
+            case 0:
+                break;
+            case 1:
+                $router->action = $matches[0];
                 break;
             case 2:
                 $router->controller = ucfirst($matches[0]);
                 $router->action = $matches[1];
                 break;
-            case 1:
-                $router->action = $matches[0];
-                break;
             default:
+            case 3:
+                $module = array_slice($matches, 0 ,$size-2);
+                $router->module = strtolower(trim(join('/', $module), '/'));
+                $router->controller = ucfirst($matches[$size-2]);
+                $router->action = $matches[$size-1];
                 break;
         }
     }
