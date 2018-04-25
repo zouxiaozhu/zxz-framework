@@ -12,7 +12,7 @@ class Bb{
         
     }
 
-    public function index()
+    public function index   ()
     {
         echo 111;die;
     }
