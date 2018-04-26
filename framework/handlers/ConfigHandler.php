@@ -7,9 +7,12 @@
  */
 namespace Framework\Handlers;
 use \Framework\App;
+use Framework\Exceptions\ZxzHttpException;
 use Framework\Interfaces\HandleInterface;
 
 class ConfigHandler implements HandleInterface {
+    protected $configParams;
+
     public function __construct(App $app)
     {
 //        $this->loadHelper($app);
@@ -42,20 +45,50 @@ class ConfigHandler implements HandleInterface {
             require_once $file;
         }
 
-        require_once FRAMEWORK_PATH.DIRECTORY_SEPARATOR.'helpers.php';
+        require_once FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'helpers.php';
         return true;
     }
 
     public function __get($name = '')
     {
-        var_dump(debug_backtrace());
         return $this->$name;
     }
-
 
     public function __set($name = '', $value = '')
     {
         $this->$name = $value;
     }
 
+    public function all()
+    {
+        return $this->configParams;
+    }
+
+    public function get($name= '')
+    {
+        if ( ! $name ) return NULL;
+        $name = trim($name, '.');
+        if(false === strpos( $name, '.')){
+            return array_key_exists($name, $this->configItems) ? $this->configItems[$name] : NULL;
+        }
+
+        $name = explode('.', $name);
+        return $this->checkKey($name, $this->configParams);
+    }
+
+    private function checkKey($name = [], $need_check = []){
+        if(! $name || ! $need_check ) {
+            return NULL;
+        }
+        $tmp = $need_check;
+        foreach ($name as $n ){
+            if (!isset($tmp[$n])){
+                return NULL;
+            }
+
+            $tmp = $tmp[$n];
+        }
+
+        return $tmp;
+    }
 }

@@ -34,8 +34,8 @@ class EnvHandler implements HandleInterface{
      * @return mixed|string
      */
     public function env($key = ''){
-
         if (!$key) return '';
+
         return array_key_exists($key, $this->envParams) ? $this->envParams[$key] : null;
 
     }

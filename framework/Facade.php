@@ -13,10 +13,18 @@ class Facade {
     public static function __callStatic($method, $args){
 
         $alias = static::getFacadeAccessor(); // config
-        $instance =  (static::getInstance($alias));
-//        var_export(get_class_methods($instance));die;
-        return $instance->$method();
+        $instance =  static::getInstance($alias);
 
+        switch (count($args)) {
+            case 0:
+                return $instance->$method();
+            case 1:
+                return $instance->$method($args[0]);
+            case 2:
+                return $instance->$method($args[0], $args[1]);
+            default:
+                return call_user_func_array([$instance, $method], $args);
+        }
     }
 
     public static  function getInstance($alias){

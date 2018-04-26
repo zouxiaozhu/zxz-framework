@@ -6,13 +6,14 @@
  * Time: 下午11:56
  */
 namespace App\Controllers\Index;
-class Index {
-    public function __construct()
-    {
-    }
+use Framework\Core\ZxzController;
+use Framework\Facades\Config;
+use Framework\Facades\Env;
+
+class Index extends ZxzController {
 
     public function index()
     {
-        return 'its index';
+        return Config::get('database.default');
     }
 }

@@ -1,0 +1,3730 @@
+array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)array (
+  '__coreError' => 
+  array (
+    'code' => 404,
+    'message' => 'Class Index CALL TO UNDEFINED METHOD favicon.ico Not Found',
+    'infomations' => 
+    array (
+      'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+      'line' => 82,
+      'trace' => 
+      array (
+        0 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/core/Router.php',
+          'line' => 41,
+          'function' => 'start',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+          ),
+        ),
+        1 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/handlers/RouterHandler.php',
+          'line' => 18,
+          'function' => 'init',
+          'class' => 'Framework\\Core\\Router',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        2 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/App.php',
+          'line' => 42,
+          'function' => 'register',
+          'class' => 'Framework\\Handlers\\RouterHandler',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Framework\App::__set_state(array(
+               'runningMode' => 'fpm-fcgi',
+               'rootPath' => '/home/zouxiaozhu/project/phpcode/zxz',
+               'handlesList' => 
+              array (
+                0 => 
+                Closure::__set_state(array(
+                )),
+                1 => 
+                Closure::__set_state(array(
+                )),
+                2 => 
+                Closure::__set_state(array(
+                )),
+                3 => 
+                Closure::__set_state(array(
+                )),
+              ),
+               'notOutput' => false,
+            )),
+          ),
+        ),
+        3 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          'line' => 45,
+          'function' => 'run',
+          'class' => 'Framework\\App',
+          'type' => '->',
+          'args' => 
+          array (
+            0 => 
+            Closure::__set_state(array(
+            )),
+          ),
+        ),
+        4 => 
+        array (
+          'file' => '/home/zouxiaozhu/project/phpcode/zxz/public/index.php',
+          'line' => 38,
+          'args' => 
+          array (
+            0 => '/home/zouxiaozhu/project/phpcode/zxz/framework/run.php',
+          ),
+          'function' => 'require_once',
+        ),
+      ),
+    ),
+  ),
+)

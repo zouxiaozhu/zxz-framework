@@ -30,7 +30,7 @@ try{
 
     $app->load(function () {
         // 加载路由机制 Loading route handle
-        return new \Framework\Router();
+        return new \Framework\Handlers\RouterHandler();
     });
 
     /**

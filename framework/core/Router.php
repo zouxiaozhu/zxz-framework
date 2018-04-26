@@ -62,11 +62,12 @@ class Router{
         $file_path = CONTROLLER_PATH.SEPARATOR.$this->module.SEPARATOR.ucfirst($this->controller).PHP_FILE;
 
         $uc = explode('/',$this->module.SEPARATOR.ucfirst($this->controller));
+
         $uc = array_map(function($va){
             return ucfirst($va);
         }, $uc);
-        $uc = implode('\\', $uc);
 
+        $uc = implode('\\', $uc);
         $namespace_path = '\App\Controllers\\'.$uc ;
 
         if(!file_exists($file_path))
@@ -81,7 +82,7 @@ class Router{
             throw new ZxzHttpException(404,
                 sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
         }
-        $ret = $obj->{$this->action}();
+        $ret = $obj->{$this->action}($this->app);
         $this->app->response_data = $ret;
     }
 
