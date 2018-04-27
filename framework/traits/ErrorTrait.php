@@ -5,6 +5,9 @@
  * Date: 18-3-17
  * Time: 下午10:50
  */
+
+namespace Framework\Traits;
+
 trait ErrorTrait{
     public function exceptionHandler($exception)
     {
@@ -34,7 +37,7 @@ trait ErrorTrait{
 
             default:
                 \Framework\Exceptions\ZxzHttpException::error($this->info);
-                break;
+            break;
         }
     }
 

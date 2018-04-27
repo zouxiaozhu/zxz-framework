@@ -33,12 +33,16 @@ try{
         return new \Framework\Handlers\RouterHandler();
     });
 
+    
+    $app->load(function(){
+        return new \Framework\Handlers\ModelHandler();
+    });
+
     /**
      * 启动应用
      *
      * Start framework
      */
-
     $app->run(function () use ($app) {
 
         return new \Framework\Request($app);

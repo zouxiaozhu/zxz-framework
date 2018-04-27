@@ -6,11 +6,11 @@
  * Time: 下午11:56
  */
 namespace App\Controllers\Index;
-use Framework\Core\ZxzController;
+use Framework\Core\Controller;
 use Framework\Facades\Config;
 use Framework\Facades\Env;
 
-class Index extends ZxzController {
+class Index extends Controller {
 
     public function index()
     {
