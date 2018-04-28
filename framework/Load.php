@@ -30,7 +30,7 @@ class Load {
 
         $class_info = explode('\\', $class);
         $class_name = array_pop($class_info);
-//if(strtolower($class_name) == 'bb'){echo 11;die;    }
+
         $class_info = array_map(function($value){
             return (strtolower($value));
         }, $class_info);
@@ -46,8 +46,10 @@ class Load {
                 $class_real_path = $file;
             }
         }
+        
 
         if(!file_exists($class_real_path)){
+            echo $class_real_path;die;
             throw new ZxzHttpException('400', $class_path.'not exist');
             return ;
         }
@@ -56,9 +58,5 @@ class Load {
 
         require $class_real_path;
     }
-
-
-
-
 
 }

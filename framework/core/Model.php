@@ -7,14 +7,15 @@
  */
 namespace Framework\Core;
 use App;
-class Controller{
+class Model{
     protected $app;
-    protected $database_conn;
+    protected $database_group;
+    protected $table;
 
-    public function model($database_conn = [])
+    public function __construct(App $app)
     {
-       $this->   
+        static::__construct();
     }
 
-   
+
 }
