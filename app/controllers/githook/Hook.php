@@ -34,7 +34,8 @@ class Hook extends Controller{
             zxzLog(date("Y-m-d H:i:s" ,time())." git not exist", 'git');
         }
         exec(" cd ". ROOT_PATH ." &&git checkout -- . &&  git pull");
-        $now_time = date("Y-m-d H:i:s");
+        $now_time = date("Y-m-d");
+
         zxzLog(date("Y-m-d H:i:s" ,time())." git pull end", "git-{$now_time}.log");
         return true;
 
