@@ -21,7 +21,7 @@ if (!function_exists('env')){
 if(!function_exists('zxzLog')){
     function zxzLog($data = '', $file_name = ''){
         if (!file_exists($file_name)){
-            exec("touch $file_name");
+            exec("touch $file_name && chmod 755 $file_name");
         }
 
         file_put_contents(
