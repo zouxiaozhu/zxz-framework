@@ -23,7 +23,7 @@ if(!function_exists('zxzLog')){
 //        error_log()
 
         file_put_contents(
-            $file_name,
+            LOG_PATH.SEPARATOR .$file_name,
             is_string($data) ? $data.PHP_EOL : var_export($data, 1),
             FILE_APPEND
             );

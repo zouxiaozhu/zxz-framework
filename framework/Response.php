@@ -11,7 +11,7 @@ class Response{
     {
     }
 
-    public function success($response = '22', $code = 200, $message = 'success')
+    public function success($response = [], $code = 200, $message = 'success')
     {
         header('Content-Type:Application/json; Charset=utf-8');
         echo json_encode([
@@ -20,17 +20,20 @@ class Response{
             'result'  => $response,
             'status' => true
         ],JSON_UNESCAPED_UNICODE);
+
     }
 
     public function error($response = [], $code = 500, $message = 'error')
     {
+
         header('Content-Type:Application/json; Charset=utf-8');
-        $ret = json_encode([
+        echo json_encode([
             'code'    => $code,
             'message' => $message,
             'result'  => $response,
             'status' => false
         ],JSON_UNESCAPED_UNICODE);
+
 
     }
 

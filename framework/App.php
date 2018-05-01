@@ -65,7 +65,12 @@ class App {
         if ($this->notOutput === true) {
             return;
         }
-
-        $closure()->success($this->response_data);
+        $method = $this->response_data['status'] ? 'success' : 'error';
+        $code = $this->response_data['code'] ? '200' : '400';
+        return $closure()->{$method}(
+            $this->response_data['data']?:[],
+            $this->response_data['code'] ?:$code,
+            $this->response_data['msg']?:''
+        );
     }
 }

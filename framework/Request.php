@@ -209,9 +209,12 @@ class Request{
         return [];
     }
 
-    public function all()
+    public function all( $name = '')
     {
         $res = array_merge($this->postParams, $this->getParams);
+        if ( $name ) {
+            return htmlspecialchars($res[$name]) ? : null;
+        }
         foreach ($res as &$v) {
             $v = htmlspecialchars($v);
         }

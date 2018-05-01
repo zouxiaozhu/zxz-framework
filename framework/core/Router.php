@@ -49,12 +49,15 @@ class Router{
         $this->executeType = 'controller';
     }
 
+    /**
+     * @throws ZxzHttpException
+     */
     protected function start()
     {
 
-        $moudle_dir = CONTROLLER_PATH.SEPARATOR.$this->module;
+        $module_dir = CONTROLLER_PATH.SEPARATOR.$this->module;
 
-        if(!is_dir($moudle_dir) || !is_readable($moudle_dir)){
+        if(!is_dir($module_dir) || !is_readable($module_dir)){
             throw new ZxzHttpException(404,
                 sprintf('DIR %s NOT FOUND OR PERMISSION DENIED', $this->module));
         }
@@ -76,7 +79,7 @@ class Router{
                 sprintf('FILE %s NOT FOUND OR PERMISSION DENIED', $this->controller));
         }
 
-        $obj = new $namespace_path();
+        $obj = new $namespace_path( $this->app);
 
         if(!method_exists($obj, $this->action)){
             throw new ZxzHttpException(404,
