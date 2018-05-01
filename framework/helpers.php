@@ -19,13 +19,16 @@ if (!function_exists('env')){
 
 
 if(!function_exists('zxzLog')){
-    function zxzLog($data = '', $file_name = ''){
+    function zxzLog($data = '', $file_name = '', $dir = ''){
+        $dir = env('log_path') ?
+            RESOURCE_PATH .DIRECTORY_SEPARATOR.'/log/'.env('log_path') : RESOURCE_PATH.'/log';
+
         if (!file_exists($file_name)){
             exec("touch $file_name && chmod 755 $file_name");
         }
 
         file_put_contents(
-            LOG_PATH.SEPARATOR .$file_name,
+            $dir.SEPARATOR .$file_name,
             is_string($data) ? $data.PHP_EOL : var_export($data, 1),
             FILE_APPEND
             );

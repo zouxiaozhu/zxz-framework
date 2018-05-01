@@ -30,8 +30,6 @@ class LogHandler implements HandleInterface{
 
     public function write($data, $file_name= '')
     {
-        zxzLog($data,
-            $this->logDir.'/'.($file_name ? : $this->logFileName)
-        );
+        zxzLog($data, $file_name ? : $this->logFileName);
     }
 }
