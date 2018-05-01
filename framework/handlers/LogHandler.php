@@ -23,6 +23,8 @@ class LogHandler implements HandleInterface{
         if (!file_exists($this->logDir)){
             @mkdir($this->logDir, 0777, true);
         }
+
+
         $this->logFileName= 'log_'.date('Y-m-d');
     }
 

@@ -20,7 +20,9 @@ if (!function_exists('env')){
 
 if(!function_exists('zxzLog')){
     function zxzLog($data = '', $file_name = ''){
-//        error_log()
+        if (!file_exists($file_name)){
+            exec("touch $file_name");
+        }
 
         file_put_contents(
             LOG_PATH.SEPARATOR .$file_name,
