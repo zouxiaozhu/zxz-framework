@@ -33,10 +33,10 @@ class Hook extends Controller{
         if ( !$git_bin ) {
             zxzLog(date("Y-m-d H:i:s" ,time())." git not exist", 'git');
         }
-
+        file_put_contents(ROOT_PATH, '111111');
         exec(" cd ". ROOT_PATH ." &&git checkout -- . &&  git pull");
         zxzLog(date("Y-m-d H:i:s" ,time())." git pull end", 'git');
         return true;
-        echo 111;
+
     }
 }
