@@ -37,5 +37,6 @@ class Hook extends Controller{
         exec(" cd ". ROOT_PATH ." &&git checkout -- . &&  git pull");
         zxzLog(date("Y-m-d H:i:s" ,time())." git pull end", 'git');
         return true;
+        echo 111;
     }
 }
