@@ -16,6 +16,7 @@ return [
                 'dbname'=>'mj_pro',
                 'port'=>3306,
                 'username'=>'root'
-            ]
+            ],
+
         ]
     ];

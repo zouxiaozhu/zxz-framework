@@ -25,7 +25,14 @@ class Container{
     }
 
     // 获取对象的实例
-    public function getSingle($alias = '',$closure = '')
+
+    /**
+     * @param string $alias
+     * @param string $closure
+     * @return mixed
+     * @throws ZxzHttpException
+     */
+    public function getSingle($alias = '', $closure = '')
     {
         if (!array_key_exists($alias, $this->instanceMap)){
             throw new ZxzHttpException('404', 'Class '.$alias);

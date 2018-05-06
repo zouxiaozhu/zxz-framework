@@ -12,7 +12,10 @@ use Framework\Exceptions\ZxzHttpException;
 
 class DB {
     protected $database_group;
-
+    protected $_limit;
+    protected $_sql;
+    protected $_select;
+    protected $_order_by;
     protected $db_strategy_map  = [
         'mysql' => 'Framework\Orm\Db\Mysql'
     ];
@@ -64,7 +67,7 @@ class DB {
     public function select($data = [])
     {
 
-        if ( (is_array($data) && count($data) != count($data, 1)) ||)
+        if ( (is_array($data) && count($data) != count($data, 1)))
         {
             return new ZxzHttpException(400, 'field error');
         }
@@ -74,12 +77,12 @@ class DB {
         }
 
         $field = $field ? : $field;
-        $this->select = $field;
+        $this->_select = $field;
     }
 
     public function orderBy($field = '', $sort = 'ASC')
     {
-        $this->order_by .= "order by {$field} {$sort}";
+        $this->_order_by .= "order by {$field} {$sort}";
         return $this;
     }
 
@@ -91,15 +94,38 @@ class DB {
         }
 
         if ( ! ctype_digit(strval($len))) {
-            return new ZxzHttpException(400, 'limit illegle')
+            return new ZxzHttpException(400, 'limit illegle');
         }
 
-        $this->limit = "limit {$start}";
+        $this->_limit = "limit {$start}";
         if ($len) {
-            $this->limit .= "{$len}";
+            $this->_limit .= "{$len}";
         }
 
         return $this;
+    }
+
+    /**
+     * @throws ZxzHttpException
+     */
+    public function decide()
+    {
+
+        $_strategy = App::$container->getSingle('config');
+        if ( !$_strategy ) {
+            throw new ZxzHttpException(400, 'NOT DATABASE GROUP');
+        }
+        $_db_config = $_strategy[$this->database_group];
+
+        $this->_db_instance = App::$container->getSingle(
+            $this->database_group, function () use($_db_config){
+                return new $_db_config(
+                    $_db_config['host'],
+                    $_db_config['dbname'],
+                    $_db_config['username'],
+                    $_db_config['password']
+                );
+        });
     }
 
 }
