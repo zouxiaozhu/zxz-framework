@@ -7,7 +7,8 @@
  */
 
 return [
-    'database'=>
+    'prefix' => '',
+    'database' =>
         [
             'default' =>[
                 'host'=>'localhost',

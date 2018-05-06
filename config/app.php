@@ -7,8 +7,9 @@
  */
 return [
     'alias'=>[
-11
-
-
+        'predis' => Predis\Client::class,
     ],
+    'providers'=>[
+        Predis\Client::class
+    ]
 ];
