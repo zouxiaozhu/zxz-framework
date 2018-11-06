@@ -5,15 +5,20 @@
  * Date: 18-3-17
  * Time: 上午1:15
  */
+
 namespace Framework\Handlers;
+
 use \Framework\App;
 use Framework\Exceptions\ZxzHttpException;
 use Framework\Interfaces\HandleInterface;
 
-class ConfigHandler implements HandleInterface {
+class ConfigHandler implements HandleInterface
+{
     protected $configParams;
 
-    public function __construct(App $app)
+    protected $configItems;
+
+    public function __construct()
     {
 //        $this->loadHelper($app);
     }
@@ -27,21 +32,21 @@ class ConfigHandler implements HandleInterface {
 
     }
 
-    protected function loadConfig(App $app){
+    protected function loadConfig(App $app)
+    {
 
-        $configPath = $app->rootPath. DIRECTORY_SEPARATOR.'config/*.php';
+        $configPath = $app->rootPath . DIRECTORY_SEPARATOR . 'config/*.php';
         $configItems = [];
-        foreach (glob($configPath)  as $file){
-
-            $configItems =array_merge($configItems, require_once $file);
+        foreach (glob($configPath) as $file) {
+            $configItems = array_merge($configItems, require_once $file);
         }
 
         $this->configParams = $configItems;
     }
 
-    protected function loadHelper(App $app){
-
-        foreach (glob($app->rootPath.'/helpers/*.php')  as $file){
+    protected function loadHelper(App $app)
+    {
+        foreach (glob($app->rootPath . '/helpers/*.php') as $file) {
             require_once $file;
         }
 
@@ -64,11 +69,11 @@ class ConfigHandler implements HandleInterface {
         return $this->configParams;
     }
 
-    public function get($name= '')
+    public function get($name = '')
     {
-        if ( ! $name ) return NULL;
+        if (!$name) return NULL;
         $name = trim($name, '.');
-        if(false === strpos( $name, '.')){
+        if (false === strpos($name, '.')) {
             return array_key_exists($name, $this->configItems) ? $this->configItems[$name] : NULL;
         }
 
@@ -76,13 +81,14 @@ class ConfigHandler implements HandleInterface {
         return $this->checkKey($name, $this->configParams);
     }
 
-    private function checkKey($name = [], $need_check = []){
-        if(! $name || ! $need_check ) {
+    private function checkKey($name = [], $need_check = [])
+    {
+        if (!$name || !$need_check) {
             return NULL;
         }
         $tmp = $need_check;
-        foreach ($name as $n ){
-            if (!isset($tmp[$n])){
+        foreach ($name as $n) {
+            if (!isset($tmp[$n])) {
                 return NULL;
             }
 

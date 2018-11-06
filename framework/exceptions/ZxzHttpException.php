@@ -10,9 +10,12 @@
  ********************************************/
 
 namespace Framework\Exceptions;
+
 use Exception;
 use Framework\App;
-class ZxzHttpException extends Exception{
+
+class ZxzHttpException extends Exception
+{
 
 
     /**
@@ -57,11 +60,11 @@ class ZxzHttpException extends Exception{
     {
         $data = [
             '__coreError' => [
-                'code'    => $this->getCode(),
+                'code' => $this->getCode(),
                 'message' => $this->getMessage(),
-                'infomations'  => [
-                    'file'  => $this->getFile(),
-                    'line'  => $this->getLine(),
+                'infomations' => [
+                    'file' => $this->getFile(),
+                    'line' => $this->getLine(),
                     'trace' => $this->getTrace(),
                 ]
             ]

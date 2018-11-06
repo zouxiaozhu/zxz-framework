@@ -7,20 +7,19 @@
  */
 
 // 引入框架文件
-require_once(__DIR__. DIRECTORY_SEPARATOR . 'App.php');
-try{
+require_once(__DIR__ . DIRECTORY_SEPARATOR . 'App.php');
+try {
 
     $app = new Framework\App(realpath(__DIR__ . '/..'), function () {
         return require(__DIR__ . '/Load.php');
     });
 
-
-    $app->load(function(){
+    $app->load(function () {
         return new \Framework\Handlers\EnvHandler();
     });
 
-    $app->load(function() use($app ){
-        return new \Framework\Handlers\ConfigHandler($app);
+    $app->load(function () {
+        return new \Framework\Handlers\ConfigHandler();
     });
 
     $app->load(function () {
@@ -33,8 +32,13 @@ try{
         return new \Framework\Handlers\RouterHandler();
     });
 
-    
-    $app->load(function(){
+    $app->load(function () {
+        // 加载中间价
+        return new \Framework\Handlers\MiddlewareHandler();
+    });
+
+
+    $app->load(function () {
         return new \Framework\Handlers\ModelHandler();
     });
 
@@ -44,7 +48,6 @@ try{
      * Start framework
      */
     $app->run(function () use ($app) {
-
         return new \Framework\Request($app);
     });
 
@@ -64,8 +67,6 @@ try{
         return new \Framework\Response();
     });
 
-
-
-}catch (\Framework\Exceptions\ZxzHttpException $e){
+} catch (\Framework\Exceptions\ZxzHttpException $e) {
     $e->response();
 }

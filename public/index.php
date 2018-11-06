@@ -11,10 +11,10 @@ define('ROOT_PATH', dirname(dirname(__FILE__)));
 //define('ROOT_PATH', getcwd().'/../');
 define('DEBUG_MODE', true);
 
-if (DEBUG_MODE){
+if (DEBUG_MODE) {
     ini_set('display_errors', 'on');
     error_reporting(E_ALL ^ E_NOTICE);
-}else{
+} else {
     ini_set('display_errors', 'off');
     error_reporting(0);
 }
@@ -27,13 +27,12 @@ if (DEBUG_MODE){
 //公共文件入口
 define('PUBLIC_PATH', dirname(__DIR__));
 //
-define('RESOURCE_PATH',ROOT_PATH.DIRECTORY_SEPARATOR.'resource');
-define('LOG_PATH',RESOURCE_PATH.DIRECTORY_SEPARATOR.'log');
-define('FRAMEWORK_PATH', ROOT_PATH.DIRECTORY_SEPARATOR.'framework');
+define('RESOURCE_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'resource');
+define('LOG_PATH', RESOURCE_PATH . DIRECTORY_SEPARATOR . 'log');
+define('FRAMEWORK_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'framework');
 // 应用路径
-define('APP_PATH', ROOT_PATH.DIRECTORY_SEPARATOR.'app');
-define('CONTROLLER_PATH', APP_PATH.SEPARATOR.'controllers');
+define('APP_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'app');
+define('CONTROLLER_PATH', APP_PATH . SEPARATOR . 'controllers');
 
 
-
-require_once(FRAMEWORK_PATH.DIRECTORY_SEPARATOR.'run.php');
+require_once(FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'run.php');

@@ -7,23 +7,33 @@
  */
 
 namespace Framework;
+
 use Closure;
-class App {
+
+/**
+ * class App
+ * @property string rootPath
+ */
+class App
+{
 
 
     private $runningMode = 'fpm';
+
     private $rootPath;              // 需要用魔术方法获取
     private $handlesList = [];      //框架加载流程一系列处理类集合
     public static $app;
     public static $container;
     public $notOutput = false;
-    public function __construct($root, $loader)    {
+
+    public function __construct($root, $loader)
+    {
 
 
         $this->runningMode = php_sapi_name();
-         // 根目录
+        // 根目录
 
-         // echo getenv('EASY_MODE');die;
+        // echo getenv('EASY_MODE');die;
         $this->rootPath = $root;
 
         is_callable($loader) ? $loader() : require_once $loader;
@@ -34,10 +44,11 @@ class App {
         self::$container = new Container();
     }
 
-    public function run(Closure $request){
-        self::$container->setSingle('request',$request);
+    public function run(Closure $request)
+    {
+        self::$container->setSingle('request', $request);
 
-        foreach ($this->handlesList as $handle){
+        foreach ($this->handlesList as $handle) {
 
             $handle()->register($this);
         }
@@ -58,6 +69,7 @@ class App {
     public function load(Closure $handle)
     {
         $this->handlesList[] = $handle;
+
     }
 
     public function response(Closure $closure)
@@ -65,12 +77,14 @@ class App {
         if ($this->notOutput === true) {
             return;
         }
+
         $method = $this->response_data['status'] ? 'success' : 'error';
-        $code = $this->response_data['code'] ? '200' : '400';
+        $code = (int) $this->response_data['code'] ?: '400';
+        $msg = (string) $this->response_data['msg'] ?: '';
         return $closure()->{$method}(
-            $this->response_data['data']?:[],
-            $this->response_data['code'] ?:$code,
-            $this->response_data['msg']?:''
+            $this->response_data,
+            $code,
+            $msg
         );
     }
 }

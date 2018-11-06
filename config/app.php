@@ -11,5 +11,6 @@ return [
     ],
     'providers'=>[
         Predis\Client::class
-    ]
+    ],
+
 ];

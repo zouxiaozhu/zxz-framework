@@ -29,7 +29,7 @@ if(!function_exists('zxzLog')){
 
         file_put_contents(
             $dir.SEPARATOR .$file_name,
-            is_string($data) ? $data.PHP_EOL : var_export($data, 1),
+            date('Y-m-d H:i:s') . '  ----  ' . (is_string($data) ? $data.PHP_EOL : var_export($data, 1)),
             FILE_APPEND
             );
     }

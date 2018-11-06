@@ -18,7 +18,8 @@ class Load {
         ];
 
         spl_autoload_register(['Framework\Load', 'autoload']);
-        require_once $app->rootPath . DIRECTORY_SEPARATOR .'/vendor/autoload.php' ;
+
+        realpath($app->rootPath . DIRECTORY_SEPARATOR . '/vendor/autoload.php') && require_once $app->rootPath . DIRECTORY_SEPARATOR . '/vendor/autoload.php';
 
 //        $config = new Config();
 

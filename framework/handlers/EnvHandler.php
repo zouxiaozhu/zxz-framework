@@ -5,12 +5,15 @@
  * Date: 18-3-13
  * Time: 下午11:53
  */
+
 namespace Framework\Handlers;
+
 use Framework\App;
 use Framework\Exceptions\ZxzHttpException;
 use Framework\Interfaces\HandleInterface;
 
-class EnvHandler implements HandleInterface{
+class EnvHandler implements HandleInterface
+{
 
     private $envParams = [];
 
@@ -33,22 +36,26 @@ class EnvHandler implements HandleInterface{
      * @param string $key
      * @return mixed|string
      */
-    public function env($key = ''){
+    public function env($key = '')
+    {
         if (!$key) return '';
 
         return array_key_exists($key, $this->envParams) ? $this->envParams[$key] : null;
 
     }
 
+    /**
+     * @param App $app
+     * @throws ZxzHttpException
+     */
     public function loadEnv(App $app)
     {
-        $env_path = $app->rootPath. DIRECTORY_SEPARATOR.'.env';
-         if(!realpath($env_path)){
+        $env_path = $app->rootPath . DIRECTORY_SEPARATOR . '.env';
+        if (!realpath($env_path)) {
             throw new ZxzHttpException(500, 'env not exist');
         }
 
         $env = parse_ini_file($env_path, true);
         $this->envParams = array_merge($_ENV, $env);
-
     }
 }
