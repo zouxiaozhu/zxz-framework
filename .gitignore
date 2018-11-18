@@ -6,4 +6,5 @@ composer.lock
 /idea/
 /idea/*
 /.env
+.env
 
