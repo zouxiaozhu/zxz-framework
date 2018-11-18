@@ -16,4 +16,10 @@ class Index extends Controller {
     {
         return Config::get('database.default');
     }
+
+    public function collection()
+    {
+        $a = ['a', 'b', 'c'];
+        var_dump(collect($a)->end());die;
+    }
 }

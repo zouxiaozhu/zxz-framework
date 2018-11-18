@@ -49,6 +49,17 @@ class CollectionHandler implements HandleInterface
         return $this->items;
     }
 
+    public function first()
+    {
+        return reset($this->items);
+    }
+
+    public function end()
+    {
+        return reset(array_reverse($this->items));
+    }
+
+
     public function get($key = null)
     {
         if ($key === null) {
@@ -59,14 +70,13 @@ class CollectionHandler implements HandleInterface
             $this->items = $this->items[$key];
             return $this;
         }
-
     }
 
     /**
      * @param $items
      * @return mixed
      */
-    public function getArrayAbleItems($items)
+    protected function getArrayAbleItems($items)
     {
         if (is_array($items)) {
             return $items;
