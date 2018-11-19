@@ -4,6 +4,7 @@ namespace Framework;
 use Framework\App;
 use Framework\Exceptions\ZxzHttpException;
 
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class Load {
 
@@ -19,12 +20,10 @@ class Load {
 
         spl_autoload_register(['Framework\Load', 'autoload']);
 
-        realpath($app->rootPath . DIRECTORY_SEPARATOR . '/vendor/autoload.php') && require_once $app->rootPath . DIRECTORY_SEPARATOR . '/vendor/autoload.php';
-
+        realpath($app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php') && require_once $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 //        $config = new Config();
+}
 
-
-    }
 
     public static function autoload($class)
     {
@@ -47,10 +46,8 @@ class Load {
                 $class_real_path = $file;
             }
         }
-        
 
         if(!file_exists($class_real_path)){
-            echo $class_real_path;die;
             throw new ZxzHttpException('400', $class_path.'not exist');
             return ;
         }

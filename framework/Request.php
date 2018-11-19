@@ -232,12 +232,7 @@ class Request{
         if (isset($this->serverParams[$name])) {
             return $this->serverParams[$name];
         }
-        return '';
+        return $this->serverParams;
     }
-
-
-
-
-
 
 }

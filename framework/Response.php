@@ -14,6 +14,7 @@ class Response{
     public function success($response = [], $code = 200, $message = 'success')
     {
         header('Content-Type:Application/json; Charset=utf-8');
+
         echo json_encode([
             'code'    => $code,
             'message' => $message,

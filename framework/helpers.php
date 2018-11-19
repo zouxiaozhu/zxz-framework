@@ -6,9 +6,10 @@
  * Time: 下午4:13
  */
 
-if (!function_exists('env')){
-    function env(string $name ='', $default = null){
-        if(!$name) return null;
+if (!function_exists('env')) {
+    function env(string $name = '', $default = null)
+    {
+        if (!$name) return null;
 
         $envInstance = \Framework\App::$container->getSingle('env');
         $value = $envInstance->env($name);
@@ -18,20 +19,31 @@ if (!function_exists('env')){
 }
 
 
-if(!function_exists('zxzLog')){
-    function zxzLog($data = '', $file_name = '', $dir = ''){
-        $dir = env('log_path') ?
-            RESOURCE_PATH .DIRECTORY_SEPARATOR.'/log/'.env('log_path') : RESOURCE_PATH.'/log';
+if (!function_exists('zxzLog')) {
+    function zxzLog($data = '', $file_name = '')
+    {
+        $file_name = date('Y-m-d') . '-' .  $file_name;
 
-        if (!file_exists($file_name)){
-            exec("touch $file_name && chmod 755 $file_name");
+        $dir = env('log_path') ?
+            RESOURCE_PATH . DIRECTORY_SEPARATOR . '/logs/' . env('log_path') : RESOURCE_PATH . '/logs';
+
+        if (!is_dir($dir)) {
+            exec("mkdir -p $dir && chmod -R 755 $dir");
         }
 
+        $path = $dir . DIRECTORY_SEPARATOR . $file_name . '.log';
+        if (!file_exists($path)) {
+            exec("touch $path && chmod 755 $path");
+        }
+
+        $uri = request()->server('REQUEST_URI');
+        $method = request()->server('REQUEST_METHOD');
+
         file_put_contents(
-            $dir.SEPARATOR .$file_name,
-            date('Y-m-d H:i:s') . '  ----  ' . (is_string($data) ? $data.PHP_EOL : var_export($data, 1)),
+            $path,
+            date('Y-m-d H:i:s') . " ----$method/$uri---- "  . (is_string($data) ? $data . PHP_EOL : json_encode($data)) . PHP_EOL ,
             FILE_APPEND
-            );
+        );
     }
 }
 

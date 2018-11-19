@@ -71,7 +71,9 @@ class ZxzHttpException extends Exception
         ];
 
         // log
-        App::$container->getSingle('log')->write($data);
+
+//        var_export(App::$container);die;
+//        App::$container->getSingle('log')->write($data);
 
         // response
         header('Content-Type:Application/json; Charset=utf-8');

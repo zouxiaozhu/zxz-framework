@@ -11,3 +11,9 @@ if(!function_exists('logMessage')){
         echo 111;
     }
 }
+
+if(!function_exists('toJson')){
+    function toJson($item){
+        echo json_encode($item);die;
+    }
+}

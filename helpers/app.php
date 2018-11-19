@@ -29,10 +29,40 @@ if (!function_exists('app')) {
 }
 
 if (!function_exists('collect')) {
-    function collect($iterator) {
+    function collect($iterator)
+    {
         if (is_array($iterator)) {
-           return new \Framework\Handlers\CollectionHandler($iterator);
+            return new \Framework\Handlers\CollectionHandler($iterator);
         }
     }
 }
 
+if (!function_exists('config')) {
+    /**
+     * @param string $item
+     *
+     * @return \Framework\Handlers\ConfigHandler
+     */
+    function config(string $item = '')
+    {
+        if ($item) {
+            return app('config')->get($item);
+        }
+        return app('config');
+    }
+}
+
+if (!function_exists('request')) {
+    /**
+     * @param string $item
+     *
+     * @return \Framework\Request
+     */
+    function request(string $item = '')
+    {
+        if ($item) {
+            return app('request')->get($item);
+        }
+        return app('request');
+    }
+}

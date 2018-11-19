@@ -6,6 +6,7 @@
  * Time: 下午10:38
  */
 
+use Illuminate\Database\Capsule\Manager as Capsule;
 // 引入框架文件
 require_once(__DIR__ . DIRECTORY_SEPARATOR . 'App.php');
 try {
@@ -37,10 +38,22 @@ try {
         return new \Framework\Handlers\MiddlewareHandler();
     });
 
-
     $app->load(function () {
         return new \Framework\Handlers\ModelHandler();
     });
+
+    $capsule = new Capsule;
+    $capsule->addConnection([
+        'driver'=> 'mysql',
+        'host' => 'localhost',
+        'database'=> '111',
+        'username' => 'zhanglong-dev',
+        'password' => 520025,
+        'charset' => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'=> '',
+    ]);
+    $capsule->bootEloquent();
 
     /**
      * 启动应用
@@ -67,6 +80,8 @@ try {
         return new \Framework\Response();
     });
 
+}  catch (\Framework\Exceptions\ZxzApiException $e) {
+    $e->response();
 } catch (\Framework\Exceptions\ZxzHttpException $e) {
     $e->response();
 }

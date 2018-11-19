@@ -17,12 +17,15 @@ use Closure;
 class App
 {
 
-
+    protected $response_data = [];
     private $runningMode = 'fpm';
 
     private $rootPath;              // 需要用魔术方法获取
     private $handlesList = [];      //框架加载流程一系列处理类集合
     public static $app;
+    /**
+     * @var Container $container
+     */
     public static $container;
     public $notOutput = false;
 
@@ -44,6 +47,10 @@ class App
         self::$container = new Container();
     }
 
+    /**
+     * @param Closure $request
+     * @throws Exceptions\ZxzHttpException
+     */
     public function run(Closure $request)
     {
         self::$container->setSingle('request', $request);
@@ -81,8 +88,12 @@ class App
         $method = $this->response_data['status'] ? 'success' : 'error';
         $code = (int) $this->response_data['code'] ?: '400';
         $msg = (string) $this->response_data['msg'] ?: '';
+        $data = (array) $this->response_data['data'];
+
+        zxzLog($this->response_data, 'response');
+
         return $closure()->{$method}(
-            $this->response_data,
+            $data,
             $code,
             $msg
         );
