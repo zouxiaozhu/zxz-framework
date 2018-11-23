@@ -23,6 +23,7 @@ class Controller
     public function __construct()
     {
         $this->app = App::$container;
+        static::__construct();
     }
 //
 //    public function callConstruct(){

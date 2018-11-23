@@ -46,13 +46,14 @@ try {
     $capsule->addConnection([
         'driver'=> 'mysql',
         'host' => 'localhost',
-        'database'=> '111',
+        'database'=> 'frame',
         'username' => 'zhanglong-dev',
         'password' => 520025,
         'charset' => 'utf8',
         'collation' => 'utf8_unicode_ci',
         'prefix'=> '',
     ]);
+    $capsule->setAsGlobal(); //important
     $capsule->bootEloquent();
 
     /**
@@ -81,7 +82,21 @@ try {
     });
 
 }  catch (\Framework\Exceptions\ZxzApiException $e) {
+    zxzLog($e->getMessage(), 'exception');
     $e->response();
 } catch (\Framework\Exceptions\ZxzHttpException $e) {
+    zxzLog($e->getMessage(), 'exception');
     $e->response();
+} catch (Exception $e) {
+    $data = [
+        'code' => $e->getCode(),
+        'status' => false,
+        'msg' => $e->getMessage(),
+        'result' => array(
+            'error_line' => $e->getLine(),
+            'trace' => $e->getTrace()
+        )
+    ];
+    zxzLog($e->getMessage(), 'exception');
+    echo json_encode($data);
 }

@@ -7,7 +7,9 @@
  */
 namespace Framework\Core;
 use App;
-class BaseModel extends \Illuminate\Database\Eloquent\Model {
+use Illuminate\Database\Eloquent\Model;
+
+class BaseModel extends Model {
 
 
 }

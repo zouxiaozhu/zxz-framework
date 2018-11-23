@@ -17,7 +17,7 @@ class Response{
 
         echo json_encode([
             'code'    => $code,
-            'message' => $message,
+            'msg' => $message,
             'result'  => $response,
             'status' => true
         ],JSON_UNESCAPED_UNICODE);
@@ -30,7 +30,7 @@ class Response{
         header('Content-Type:Application/json; Charset=utf-8');
         echo json_encode([
             'code'    => $code,
-            'message' => $message,
+            'msg' => $message,
             'result'  => $response,
             'status' => false
         ],JSON_UNESCAPED_UNICODE);
