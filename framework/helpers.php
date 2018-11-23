@@ -22,7 +22,7 @@ if (!function_exists('env')) {
 if (!function_exists('zxzLog')) {
     function zxzLog($data = '', $file_name = '')
     {
-        $file_name = date('Y-m-d') . '-' .  $file_name;
+        $file_name = date('Y-m-d') . '-' . $file_name;
 
         $dir = env('log_path') ?
             RESOURCE_PATH . DIRECTORY_SEPARATOR . '/logs/' . env('log_path') : RESOURCE_PATH . '/logs';
@@ -38,12 +38,27 @@ if (!function_exists('zxzLog')) {
 
         $uri = request()->server('REQUEST_URI');
         $method = request()->server('REQUEST_METHOD');
+        $resq = json_encode(request()->all());
+
+        if (!in_array($file_name, ['request', 'response', 'exception'])) {
+
+            file_put_contents(
+                $path,
+                date('Y-m-d H:i:s') . '[~ ' . getmygid() . '~]' .
+                (is_string($data) ? $data . PHP_EOL : json_encode($data)) . PHP_EOL,
+                FILE_APPEND
+            );
+            return;
+        }
 
         file_put_contents(
             $path,
-            date('Y-m-d H:i:s') . " ----$method/$uri---- "  . (is_string($data) ? $data . PHP_EOL : json_encode($data)) . PHP_EOL ,
+            date('Y-m-d H:i:s') . " ----$method/$uri" . '[~ ' . getmygid() . '~]' .
+            '----- resq ' . $resq . PHP_EOL .
+            '----- resp -----' . (is_string($data) ? $data . PHP_EOL : json_encode($data)) . PHP_EOL,
             FILE_APPEND
         );
+        return;
     }
 }
 

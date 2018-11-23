@@ -59,6 +59,13 @@ class CollectionHandler implements HandleInterface
 
     }
 
+    public function filter(callable $callable) {
+        if (!$callable) {
+            $this->items = array_filter($this->items);
+        }
+
+        $this->items = array_filter($this->items, $callable);
+    }
 
     public function first()
     {

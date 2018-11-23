@@ -129,7 +129,6 @@ class Request{
 
     }
 
-
     /**
      * 魔法函数__get.
      *
@@ -139,7 +138,6 @@ class Request{
      */
     public function __get($name = '')
     {
-
         return $this->$name;
     }
 
@@ -173,7 +171,7 @@ class Request{
            return trim($default);
         }
 
-        return htmlspecialchars($this->getParams[$name]);
+        return $this->getParams[$name] ?? null;
 
     }
 
@@ -213,11 +211,9 @@ class Request{
     {
         $res = array_merge($this->postParams, $this->getParams);
         if ( $name ) {
-            return htmlspecialchars($res[$name]) ? : null;
+            return ($res[$name]) ?? null;
         }
-        foreach ($res as &$v) {
-            $v = htmlspecialchars($v);
-        }
+
         return $res;
     }
 
