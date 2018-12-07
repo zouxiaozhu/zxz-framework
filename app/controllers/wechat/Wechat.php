@@ -37,14 +37,16 @@ class Wechat extends Controller
         zxzLog("111", "testlog");
     }
 
+
     /**
      * @return array
      * @throws ZxzApiException
+     * @throws \EasyWeChat\Kernel\Exceptions\DecryptException
      * @throws \EasyWeChat\Kernel\Exceptions\InvalidConfigException
      */
     public function wxLogin()
     {
-//        $userInfo = '{"nickName":"你的坚持，终将美好","gender":1,"language":"zh_CN","city":"","province":"","country":"St.Kitts and Nevis","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJLYoe9zBkOXwPibjNQg8juZjUiaeqVpeHsb5pJF48enIvOoR3Hh4iaRN7FDUxpVOrrrF8zrnHWgASqA/132"}';
+//        $userInfo = {"nickName":"你的坚持，终将美好","gender":1,"language":"zh_CN","city":"","province":"","country":"St.Kitts and Nevis","avatarUrl":"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJLYoe9zBkOXwPibjNQg8juZjUiaeqVpeHsb5pJF48enIvOoR3Hh4iaRN7FDUxpVOrrrF8zrnHWgASqA/132"}';
         $code = request('code') ?? '';
 
         if (empty($code)) {
@@ -112,5 +114,11 @@ class Wechat extends Controller
     {
         echo request('echostr');
         die();
+    }
+
+    public function userInfo()
+    {
+        $userInfo = $this->userModel->find(request('id'))->toArray();
+        return $this->responseTrue($userInfo);
     }
 }

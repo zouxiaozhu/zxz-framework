@@ -20,7 +20,6 @@ class Modelhandler implements HandleInterface{
 
     public function register(App $app)
     {
-
         App::$container->setSingle('model', new DB($app));
     }
 

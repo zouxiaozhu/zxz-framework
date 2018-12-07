@@ -90,8 +90,9 @@ class Router
             throw new ZxzHttpException(404,
                 sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
         }
-        $ret = $obj->{$this->action}($this->app);
+        $ret = $obj->{$this->action}();
         $this->app->response_data = $ret;
+
 
     }
 

@@ -15,15 +15,13 @@ class Load
 
     public static function register(App $app)
     {
-
         self::$namespaceMap = [
             'Framework' => $app->rootPath
         ];
 
+        $loader =  include $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
         spl_autoload_register(['Framework\Load', 'autoload']);
 
-        realpath($app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php') && require_once $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
-//        $config = new Config();
     }
 
 

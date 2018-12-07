@@ -48,7 +48,7 @@ if (!function_exists('config')) {
         if ($item) {
             return app('config')->get($item);
         }
-        return app('config');
+        return app('config')->all();
     }
 }
 
@@ -64,5 +64,36 @@ if (!function_exists('request')) {
             return app('request')->get($item);
         }
         return app('request');
+    }
+}
+
+if (!function_exists('get_class_name')) {
+    /**
+     * @param $namespace
+     * @return mixed
+     */
+    function get_class_name($namespace)
+    {
+        $class = explode('\\', $namespace);
+        return end($class);
+    }
+}
+
+if (!function_exists('ds')) {
+    /**
+     * @param array $data
+     * @return mixed
+     */
+    function ds($data)
+    {
+        if (is_array($data)) {
+            echo json_encode($data);
+        } else if (is_string($data)) {
+            echo $data;
+        } else {
+            var_dump($data);
+        }
+
+        die(0);
     }
 }
