@@ -22,7 +22,9 @@ class Load
         spl_autoload_register(['Framework\Load', 'autoload']);
         include $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 
-    }
+        realpath($app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php') && require_once $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
+//        $config = new Config();
+}
 
 
     public static function autoload($class)
@@ -46,9 +48,9 @@ class Load
             }
         }
 
-        if (!file_exists($class_real_path)) {
-//            throw new ZxzHttpException('400', $class_real_path . 'not exist');
-            return;
+        if(!file_exists($class_real_path)){
+            throw new ZxzHttpException('400', $class_path.'not exist');
+            return ;
         }
 
         self::$namespaceMap[$class] = $class_real_path;

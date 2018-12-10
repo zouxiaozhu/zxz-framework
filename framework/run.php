@@ -75,29 +75,4 @@ try {
 } catch (\Framework\Exceptions\ZxzHttpException $e) {
     zxzLog($e->getMessage(), 'exception');
     $e->response();
-} catch (Exception $e) {
-    if (env('APP_ENV') != 'local') {
-        $data = [
-            'code' => $e->getCode(),
-            'status' => false,
-            'msg' => $e->getMessage(),
-            'result' => array(
-                'error_line' => $e->getLine(),
-                'trace' => $e->getTrace()
-            )
-        ];
-    } else {
-        $data = [
-            'code' => $e->getCode(),
-            'status' => false,
-            'msg' => $e->getMessage(),
-            'result' => array(
-                'error_line' => $e->getLine(),
-                'trace' => $e->getTrace()
-            )
-        ];
-    }
-
-    zxzLog($e->getMessage(), 'exception');
-    echo json_encode($data);
 }
