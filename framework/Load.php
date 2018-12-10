@@ -19,8 +19,8 @@ class Load
             'Framework' => $app->rootPath
         ];
 
-        $loader =  include $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
         spl_autoload_register(['Framework\Load', 'autoload']);
+        include $app->rootPath . DIRECTORY_SEPARATOR . 'vendor/autoload.php';
 
     }
 
@@ -47,7 +47,7 @@ class Load
         }
 
         if (!file_exists($class_real_path)) {
-            throw new ZxzHttpException('400', $class_real_path . 'not exist');
+//            throw new ZxzHttpException('400', $class_real_path . 'not exist');
             return;
         }
 

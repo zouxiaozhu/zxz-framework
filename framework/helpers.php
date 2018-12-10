@@ -62,5 +62,15 @@ if (!function_exists('zxzLog')) {
     }
 }
 
-
-
+if (!function_exists('zxzLogExp')) {
+    function zxzLogExp(Exception $exception, $file_name = 'exception')
+    {
+        zxzLog([
+            'error_msg' => $exception->getMessage(),
+            'code' => $exception->getCode(),
+            'line' => $exception->getLine(),
+            'file' => $exception->getFile()
+        ], $file_name);
+        return ;
+    }
+}

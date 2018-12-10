@@ -90,6 +90,8 @@ if (!function_exists('ds')) {
             echo json_encode($data);
         } else if (is_string($data)) {
             echo $data;
+        } else if (is_bool($data)) {
+            var_dump($data);
         } else {
             var_dump($data);
         }

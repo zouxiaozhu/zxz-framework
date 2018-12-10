@@ -97,6 +97,7 @@ try {
             )
         ];
     }
+
     zxzLog($e->getMessage(), 'exception');
     echo json_encode($data);
 }

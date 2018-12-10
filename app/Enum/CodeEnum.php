@@ -8,25 +8,24 @@
 
 namespace App\Enum;
 
-class CodeEnum
+use Zl\Compose\Enums\Enums;
+
+class CodeEnum extends Enums
 {
-     const AMQP_CONN_ERROR = 999;
-    protected $a = 1;
-    public $b = 2;
+    const AMQP_CONN_ERROR = 9999;
 
     public static function getEnum($alias)
     {
+        $constants = parent::getConstants();
+        if (!($constants[$alias] ?? '')) {
+            return 10000;
+        }
 
-       ds(self::AMQP_CONN_ERROR);
+        return $constants[$alias];
     }
 
-    public static function getConstants()
-    {
-        $class = get_called_class();
-        $t = [];
-        $reflect = new \ReflectionClass($class);
-        $t[] = $reflect->getConstants();
-        $t[] = $reflect->getProperties(null);
-       ds($reflect->getConstants());
-    }
 }
+
+
+
+

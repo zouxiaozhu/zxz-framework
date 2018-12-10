@@ -13,11 +13,24 @@ use Zl\Compose\Mq\AMQP\Client;
 
 class DirectPub extends Controller
 {
+    /**
+     * @return array
+     * @throws \Zl\Compose\Mq\Exp\ConnectExp
+     */
     public function index()
     {
-        $client = new Client();
-        $client->channel(config('amqp.default'))->publish('q_frame', 'r_frame', "----------------");
-        ds($client->getConfigKey());
+        $client = new Client(config('amqp.normal'));
+        $client->channel()
+            ->setExchange('ex_t')
+            ->setQueue('qx_t')
+            ->bind('ro_t', [
+                'durable' => true
+            ])
+            ->publish([
+                'name' => time(),
+                'age' => uniqid()
+            ]);
+
         return $this->responseTrue();
     }
 }

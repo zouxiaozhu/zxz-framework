@@ -14,6 +14,18 @@ return [
             'username' => 'frame',
             'password' => 'frame',
             'vhost' => 'frame',
+        ],
+        'normal' => [
+            'host' => 'localhost',
+            'port' => 5672,
+//            'user' => 'frame',
+            'login' => 'frame',
+            'password' => 'frame',
+            'vhost' => 'frame', //  /dev, /pre
+            'read_timeout' => 0,
+            'write_timeout' => 0,
+            'connect_timeout' => 0,
+            'heartbeat' => 0,
         ]
     ]
 ];
