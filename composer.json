@@ -7,8 +7,8 @@
     "illuminate/database": "5.4.*",
     "ext-json": "*",
     "ext-pdo": "*",
-    "zl/compose": "v1.1",
-    "php-amqplib/php-amqplib": "^2.8"
+    "php-amqplib/php-amqplib": "^2.8",
+    "zl/composes": "dev-master"
   },
   "autoload": {
     "files": [
