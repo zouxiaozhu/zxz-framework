@@ -22,7 +22,7 @@ if (!function_exists('app')) {
 
         try {
             return App::$container->getSingle($alias);
-        } catch (ZxzHttpException $e) {
+        } catch (Exception $e) {
             echo $e->response();
         }
     }
@@ -97,5 +97,20 @@ if (!function_exists('ds')) {
         }
 
         die(0);
+    }
+}
+
+if (!function_exists('report')) {
+    function report($type, $content)
+    {
+        /**
+         * @var \Framework\Handlers\ReportHandler $report
+         */
+        $report = app('report');
+        if (is_array($content)) {
+            $content = json_encode($content, JSON_UNESCAPED_SLASHES);
+        }
+
+        $report->report($type, $content);
     }
 }

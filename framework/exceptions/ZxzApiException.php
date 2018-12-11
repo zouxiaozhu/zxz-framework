@@ -21,8 +21,7 @@ class ZxzApiException extends \Exception
             ]
         ];
 
-        echo json_encode($data);die;
+        report('text', $data);
+        echo json_encode($data);
     }
-
-
 }

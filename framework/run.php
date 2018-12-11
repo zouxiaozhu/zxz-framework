@@ -40,6 +40,12 @@ try {
     $app->load(function () {
         // 加载路由机制 Loading route handle
 
+        return new \Framework\Handlers\ReportHandler();
+    });
+
+    $app->load(function () {
+        // 加载路由机制 Loading route handle
+
         return new \Framework\Handlers\RouterHandler();
     });
 
@@ -69,10 +75,10 @@ try {
         return new \Framework\Response();
     });
 
-}  catch (\Framework\Exceptions\ZxzApiException $e) {
-    zxzLog($e->getMessage(), 'exception');
+} catch (\Framework\Exceptions\ZxzApiException $e) {
+    zxzLogExp($e);
     $e->response();
 } catch (\Framework\Exceptions\ZxzHttpException $e) {
-    zxzLog($e->getMessage(), 'exception');
+    zxzLogExp($e);
     $e->response();
 }

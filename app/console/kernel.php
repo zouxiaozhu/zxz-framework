@@ -5,12 +5,14 @@
  * Date: 2018/11/25
  * Time: 下午12:14
  */
-include_once '../../vendor/autoload.php';
 
-include_once '../../public/index.php';
+namespace App\Console;
 
-push();
+use App\Console\Command\Welcome;
 
-function push()
+class Kernel
 {
+    public static $commands = [
+        'welcome' => Welcome::class
+    ];
 }
