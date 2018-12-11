@@ -20,18 +20,25 @@ class Controller
 
     }
 
-    public function __construct(App $app)
+    public function __construct()
     {
-        $this->app = $app;
+        $this->app = App::$container;
+//        static::__construct();
     }
 //
 //    public function callConstruct(){
 //        parent::__construct();
+
 //    }
 
-    public function response($status = false, $msg = [], $data = [])
+    public function responseFalse($data = [], $msg = 'undefined error')
     {
-        return ['status' => $status, 'msg' => $msg, 'data' => $data];
+        return ['status' => false, 'msg' => $msg, 'data' => $data, 'code' => 500];
+    }
+
+    public function responseTrue($data = [], $msg = 'success', $code = 200)
+    {
+        return ['status' => true, 'msg' => $msg, 'data' => $data,  'code' => $code];
     }
 
 }

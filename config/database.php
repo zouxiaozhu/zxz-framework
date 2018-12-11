@@ -7,15 +7,17 @@
  */
 
 return [
-    'prefix' => '',
     'database' =>
         [
             'default' =>[
-                'host'=>'localhost',
-                'password'=>'123456',
-                'dbname'=>'mj_pro',
-                'port'=>3306,
-                'username'=>'root'
+                'driver'=> 'mysql',
+                'host' => 'localhost',
+                'database'=> 'frame',
+                'username' => 'root',
+                'password' => '520025julanling_I987',
+                'charset' => 'utf8',
+                'collation' => 'utf8_unicode_ci',
+                'prefix'=> '',
             ],
 
         ]

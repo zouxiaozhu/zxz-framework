@@ -9,6 +9,7 @@
 namespace Framework\Core;
 use Framework\App;
 use Framework\Exceptions\ZxzHttpException;
+use Illuminate\Database\Capsule\Manager as Capsule;
 
 class DB {
     protected $database_group;
@@ -22,8 +23,12 @@ class DB {
 
     public function __construct()
     {
-
+        $capsule = new Capsule;
+        $capsule->addConnection(config('database.default'));
+        $capsule->setAsGlobal(); //important
+        $capsule->bootEloquent();
     }
+
 
     /**
      * @param string $table_name
@@ -76,7 +81,7 @@ class DB {
             $field = join(',', $data);
         }
 
-        $field = $field ? : $field;
+        $field = $field ?: $field;
         $this->_select = $field;
     }
 
@@ -90,7 +95,7 @@ class DB {
     public function limit($start = 0, $len = 0)
     {
         if ( ! ctype_digit(strval($start))) {
-            return new ZxzHttpException(400, ' offset illegle');;
+            return new ZxzHttpException(400, ' offset illegle');
         }
 
         if ( ! ctype_digit(strval($len))) {

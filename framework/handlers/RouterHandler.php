@@ -18,6 +18,8 @@ class RouterHandler implements HandleInterface
     {
         // 初始化路由模块入口类
         $router = new Router();
+
         $router->init($app);
+
     }
 }

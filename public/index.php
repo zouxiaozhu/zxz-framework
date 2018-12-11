@@ -13,7 +13,7 @@ define('DEBUG_MODE', true);
 
 if (DEBUG_MODE) {
     ini_set('display_errors', 'on');
-    error_reporting(E_ALL ^ E_NOTICE);
+    error_reporting(E_ALL);
 } else {
     ini_set('display_errors', 'off');
     error_reporting(0);
@@ -33,6 +33,6 @@ define('FRAMEWORK_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'framework');
 // 应用路径
 define('APP_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'app');
 define('CONTROLLER_PATH', APP_PATH . SEPARATOR . 'controllers');
-
+ini_set('date.timezone', 'Asia/Shanghai');
 
 require_once(FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'run.php');

@@ -49,6 +49,24 @@ class CollectionHandler implements HandleInterface
         return $this->items;
     }
 
+    public function only(array $keys)
+    {
+       if (!$keys || !array_filter($keys)) {
+           return new static($this->items);
+       }
+
+       return new static();
+
+    }
+
+    public function filter(callable $callable) {
+        if (!$callable) {
+            $this->items = array_filter($this->items);
+        }
+
+        $this->items = array_filter($this->items, $callable);
+    }
+
     public function first()
     {
         return reset($this->items);

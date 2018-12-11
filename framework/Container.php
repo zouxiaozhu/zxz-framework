@@ -1,24 +1,26 @@
 <?php
 
 namespace Framework;
+
 use Framework\Exceptions\ZxzHttpException;
 
-class Container{
+class Container
+{
     private $classMap = [];
-    public  $instanceMap = [];
+    public $instanceMap = [];
+
 
     /**
      * 注入一个类
      *
-     * inject a class
-     * @params string $alias      类别名
-     * @params string $objectName 类名
-     * @return object
+     * @param string $alias
+     * @param string $objName
+     * @return mixed
      */
-    public function set($alias= '', $objName = '')
+    public function set($alias = '', $objName = '')
     {
         $this->classMap[$alias] = $objName;
-        if (is_callable($objName)){
+        if (is_callable($objName)) {
             return $objName();
         }
         return new $objName;
@@ -34,8 +36,8 @@ class Container{
      */
     public function getSingle($alias = '', $closure = '')
     {
-        if (!array_key_exists($alias, $this->instanceMap)){
-            throw new ZxzHttpException('404', 'Class '.$alias);
+        if (!array_key_exists($alias, $this->instanceMap)) {
+            throw new ZxzHttpException('404', 'Class ' . $alias);
         }
 
         if (array_key_exists($alias, $this->instanceMap)) {
@@ -73,7 +75,7 @@ class Container{
 
 
         if (!is_string($alias) && is_callable($alias)) {
-            $instance  = $alias();
+            $instance = $alias();
             $className = get_class($instance);
             $this->instanceMap[$className] = $instance;
             return $instance;
@@ -101,16 +103,16 @@ class Container{
             return $object;
         }
 
-        if(is_object($object)){
-            if(empty($object)){
-                throw new ZxzHttpException('403', 'empty'.get_class($object));
+        if (is_object($object)) {
+            if (empty($object)) {
+                throw new ZxzHttpException('403', 'empty' . get_class($object));
             }
 
             $this->instanceMap[$alias] = $object;
             return $object;
         }
 
-        $this->instanceMap[$alias] =  new $alias();
+        $this->instanceMap[$alias] = new $alias();
         return $this->instanceMap[$alias];
     }
 

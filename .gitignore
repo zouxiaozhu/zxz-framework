@@ -1,9 +1,9 @@
 /vendor/
 composer.lock
-/resource/*
+/resource/logs/
 /.idea
 .idea
 /idea/
 /idea/*
 /.env
-
+.env

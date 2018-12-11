@@ -28,18 +28,25 @@ try {
     });
 
     $app->load(function () {
-        // 加载路由机制 Loading route handle
-        return new \Framework\Handlers\RouterHandler();
-    });
-
-    $app->load(function () {
         // 加载中间价
         return new \Framework\Handlers\MiddlewareHandler();
     });
 
-
     $app->load(function () {
         return new \Framework\Handlers\ModelHandler();
+
+    });
+
+    $app->load(function () {
+        // 加载路由机制 Loading route handle
+
+        return new \Framework\Handlers\ReportHandler();
+    });
+
+    $app->load(function () {
+        // 加载路由机制 Loading route handle
+
+        return new \Framework\Handlers\RouterHandler();
     });
 
     /**
@@ -48,6 +55,7 @@ try {
      * Start framework
      */
     $app->run(function () use ($app) {
+
         return new \Framework\Request($app);
     });
 
@@ -67,6 +75,10 @@ try {
         return new \Framework\Response();
     });
 
+} catch (\Framework\Exceptions\ZxzApiException $e) {
+    zxzLogExp($e);
+    $e->response();
 } catch (\Framework\Exceptions\ZxzHttpException $e) {
+    zxzLogExp($e);
     $e->response();
 }

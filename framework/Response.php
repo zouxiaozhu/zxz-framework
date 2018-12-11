@@ -5,8 +5,10 @@
  * Date: 18-3-17
  * Time: 下午10:37
  */
+
 namespace Framework;
-class Response{
+class Response
+{
     public function __construct()
     {
     }
@@ -14,12 +16,13 @@ class Response{
     public function success($response = [], $code = 200, $message = 'success')
     {
         header('Content-Type:Application/json; Charset=utf-8');
+
         echo json_encode([
-            'code'    => $code,
-            'message' => $message,
-            'result'  => $response,
+            'code' => $code,
+            'msg' => $message,
+            'result' => $response,
             'status' => true
-        ],JSON_UNESCAPED_UNICODE);
+        ], JSON_UNESCAPED_UNICODE);
 
     }
 
@@ -28,11 +31,11 @@ class Response{
 
         header('Content-Type:Application/json; Charset=utf-8');
         echo json_encode([
-            'code'    => $code,
-            'message' => $message,
-            'result'  => $response,
+            'code' => $code,
+            'msg' => $message,
+            'result' => $response,
             'status' => false
-        ],JSON_UNESCAPED_UNICODE);
+        ], JSON_UNESCAPED_UNICODE);
 
 
     }

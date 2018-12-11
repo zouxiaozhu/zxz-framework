@@ -16,7 +16,7 @@ class ConfigHandler implements HandleInterface
 {
     protected $configParams;
 
-    protected $configItems;
+//    protected $configItems;
 
     public function __construct()
     {
@@ -74,7 +74,7 @@ class ConfigHandler implements HandleInterface
         if (!$name) return NULL;
         $name = trim($name, '.');
         if (false === strpos($name, '.')) {
-            return array_key_exists($name, $this->configItems) ? $this->configItems[$name] : NULL;
+            return array_key_exists($name, $this->configParams) ? $this->configParams[$name] : NULL;
         }
 
         $name = explode('.', $name);
