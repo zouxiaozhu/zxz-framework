@@ -34,5 +34,4 @@ define('FRAMEWORK_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'framework');
 define('APP_PATH', ROOT_PATH . DIRECTORY_SEPARATOR . 'app');
 define('CONTROLLER_PATH', APP_PATH . SEPARATOR . 'controllers');
 ini_set('date.timezone', 'Asia/Shanghai');
-
 require_once(FRAMEWORK_PATH . DIRECTORY_SEPARATOR . 'run.php');
