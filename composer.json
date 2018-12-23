@@ -8,7 +8,8 @@
     "ext-json": "*",
     "ext-pdo": "*",
     "php-amqplib/php-amqplib": "^2.8",
-    "zl/composes": "dev-master"
+    "zl/composes": "dev-master",
+    "ext-amqp": "*"
   },
   "autoload": {
     "files": [

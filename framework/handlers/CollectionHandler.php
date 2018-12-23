@@ -18,7 +18,7 @@ class CollectionHandler implements HandleInterface
 
     public function register(App $app)
     {
-
+        App::$container->setSingle('collection', $this);
     }
 
     public function __construct($items = [])
@@ -51,15 +51,16 @@ class CollectionHandler implements HandleInterface
 
     public function only(array $keys)
     {
-       if (!$keys || !array_filter($keys)) {
-           return new static($this->items);
-       }
+        if (!$keys || !array_filter($keys)) {
+            return new static($this->items);
+        }
 
-       return new static();
+        return new static();
 
     }
 
-    public function filter(callable $callable) {
+    public function filter(callable $callable)
+    {
         if (!$callable) {
             $this->items = array_filter($this->items);
         }

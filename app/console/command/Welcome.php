@@ -16,6 +16,9 @@ class Welcome extends Controller
 {
     public function handle(Request $request, $user_id, $name, $age)
     {
+
+
+
         return $this->responseTrue([$request->all(), $user_id, $name, $age]);
     }
 }
