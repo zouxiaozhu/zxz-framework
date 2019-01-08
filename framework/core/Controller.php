@@ -9,6 +9,7 @@
 namespace Framework\Core;
 
 use Framework\App;
+use Framework\Request;
 
 class Controller
 {
@@ -18,6 +19,11 @@ class Controller
     public function model($database_conn = [])
     {
 
+    }
+
+    public function handle(Request $request)
+    {
+        
     }
 
     public function __construct()

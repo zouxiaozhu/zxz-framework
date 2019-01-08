@@ -9,6 +9,7 @@
 namespace Framework\Core;
 
 use Framework\App;
+use Framework\Exceptions\CommandException;
 use Framework\Exceptions\ZxzHttpException;
 use function GuzzleHttp\Psr7\uri_for;
 
@@ -99,11 +100,14 @@ class Router
                 throw new ZxzHttpException(404,
                     sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
             }
-            $ret = $obj->{$this->action}(request(), ...$this->cli_params);
+            try {
+                $ret = $obj->{$this->action}(request(), ...$this->cli_params);
+            } catch (\Exception $exception) {
+                throw new CommandException($exception->getMessage() . '---' . $exception->getCode(), 499);
+            }
         }
 
         $this->app->response_data = $ret;
-
 
 
     }

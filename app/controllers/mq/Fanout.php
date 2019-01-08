@@ -11,7 +11,7 @@ namespace App\controllers\mq;
 use Framework\Core\Controller;
 use Zl\Compose\Mq\AMQP\Client;
 
-class DirectPub extends Controller
+class Fanout extends Controller
 {
 
     /**
@@ -20,15 +20,14 @@ class DirectPub extends Controller
      */
     public function publish()
     {
-        $ex = 'ex_t121';
-        $qu = 'qu_t121';
-        $ro = 'ro_t121';
-        $qu_type = AMQP_EX_TYPE_DIRECT;
+        $ex = 'ex_fa21';
+        $qu = 'qu_fa21';
+        $ro = 'ro_fa21';
         $arr = [
-            'name' => time(),
-            'age' => uniqid()
+            'name' => 'fa' . time(),
+            'age' => 'fa' . uniqid()
         ];
-
+        $qu_type = AMQP_EX_TYPE_FANOUT;
         $client = new Client(config('amqp.normal'));
         $client->channel()
             ->setExchange($ex, $qu_type)
@@ -39,25 +38,29 @@ class DirectPub extends Controller
         return $this->responseTrue();
     }
 
+
     /**
      * @throws \Zl\Compose\Mq\Exp\ConnectExp
      * @throws \Zl\Compose\Mq\Exp\RabbitMqExp
      */
     public function consumer()
     {
-        $ex = 'ex_t121';
-        $qu = 'qu_t121';
-        $ro = 'ro_t121';
-        $qu_type = AMQP_EX_TYPE_DIRECT;
+        $ex = 'ex_fa21';
+        $qu = 'qu_fa21';
+        $ro = 'ro_fa21';
+        $qu_type = AMQP_EX_TYPE_FANOUT;
 
         $client = new Client(config('amqp.normal'));
         $client->channel()
             ->setExchange($ex, $qu_type)
             ->setQueue($qu, [], 10000)
             ->bind($ro)
-            ->consumerBlock(function ($msg) {
-                zxzLog($msg);
-                return false;
-            }, false, 5);
+            ->consumerBlock(function ($body) {
+                if ($body['name'] == 'fa1545030472') {
+                    return false;
+                } else {
+                    return true;
+                }
+            }, false, 5, 5);
     }
 }

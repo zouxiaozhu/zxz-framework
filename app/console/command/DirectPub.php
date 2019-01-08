@@ -6,14 +6,18 @@
  * Time: 下午5:23
  */
 
-namespace App\controllers\mq;
+namespace App\Console\Command;
 
 use Framework\Core\Controller;
+use Framework\Request;
 use Zl\Compose\Mq\AMQP\Client;
 
 class DirectPub extends Controller
 {
-
+    public function handle(Request $request)
+    {
+        return $this->consumer();
+    }
     /**
      * @return array
      * @throws \Zl\Compose\Mq\Exp\ConnectExp
@@ -56,8 +60,8 @@ class DirectPub extends Controller
             ->setQueue($qu, [], 10000)
             ->bind($ro)
             ->consumerBlock(function ($msg) {
-                zxzLog($msg);
-                return false;
-            }, false, 5);
+                zxzLog($msg, 'trest');
+                return true;
+            }, false, 5, 0);
     }
 }

@@ -8,11 +8,13 @@
 
 namespace App\Console;
 
+use App\Console\Command\DirectPub;
 use App\Console\Command\Welcome;
 
 class Kernel
 {
     public static $commands = [
-        'welcome' => Welcome::class
+        'welcome' => Welcome::class,
+        'direct_publish' => DirectPub::class
     ];
 }
