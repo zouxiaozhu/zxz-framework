@@ -9,19 +9,21 @@
 namespace App\controllers\mq;
 
 use Framework\Core\Controller;
+use Framework\Request;
 use Zl\Compose\Mq\AMQP\Client;
 
-class DirectPub extends Controller
+class PubConfirm extends Controller
 {
+
     /**
      * @return array
      * @throws \Zl\Compose\Mq\Exp\ConnectExp
      */
-    public function publish()
+    public function handle(Request $request)
     {
-        $ex = 'ex_t121';
-        $qu = 'qu_t121';
-        $ro = 'ro_t121';
+        $ex = 'ci1_confirm';
+        $qu = 'qu1_confirm';
+        $ro = 'ro1_confirm';
         $qu_type = AMQP_EX_TYPE_DIRECT;
         $arr = [
             'name' => time(),
@@ -29,36 +31,31 @@ class DirectPub extends Controller
         ];
 
         $client = new Client(config('amqp.normal'));
+
         $client->channel()
             ->setExchange($ex, $qu_type)
-            ->setQueue($qu, [], 10000)
+            ->setQueue($qu, [], 10)
             ->bind($ro)
-            ->publish($arr);
+            ->publishWithConfirm($arr);
 
         return $this->responseTrue();
     }
 
-
     /**
+     * @return array
      * @throws \Zl\Compose\Mq\Exp\ConnectExp
-     * @throws \Zl\Compose\Mq\Exp\RabbitMqExp
      */
-    public function consumer()
+    public function count()
     {
-        $ex = 'ex_t121';
-        $qu = 'qu_t121';
-        $ro = 'ro_t121';
-        $qu_type = AMQP_EX_TYPE_DIRECT;
 
+        $qu = 'qu1_confirm';
         $client = new Client(config('amqp.normal'));
+
         $client->channel()
-            ->setExchange($ex, $qu_type)
-            ->setQueue($qu, [], 10000)
-            ->bind($ro)
-            ->consumerBlock(function ($msg) {
-                sleep(30);
-                zxzLog($msg);
-                return false;
-            }, false, 5);
+            ->setQueue($qu, [], 10)
+            ->getQueueCount();
+
+        return $this->responseTrue();
     }
+
 }

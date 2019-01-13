@@ -15,6 +15,14 @@ use function GuzzleHttp\Psr7\uri_for;
 
 class Router
 {
+    protected $app;
+    protected $action;
+    protected $requestUri;
+    protected $request;
+    protected $config;
+    protected $module;
+    protected $controller;
+    protected $iocClass = [];
     private $routeStrategyMap = [
         'general' => 'Framework\Router\General',
         'pathinfo' => 'Framework\Router\Pathinfo',
@@ -25,6 +33,11 @@ class Router
 
     protected $routeStrategy;
 
+    /**
+     * @param App $app
+     * @throws CommandException
+     * @throws ZxzHttpException
+     */
     public function init(App $app)
     {
         $app::$container->setSingle('router', $this);
@@ -45,21 +58,16 @@ class Router
 
         (new $this->routeStrategyMap[$this->routeStrategy])->router($this);
         $this->start();
-
     }
 
     protected function classv()
     {
-
         $controller = ucfirst($this->controller);
         $folder = ucfirst($this->config->config['application_folder']);
         $this->classPath = "{$folder}\\{$this->module}\\{$controller}";
         $this->executeType = 'controller';
     }
 
-    /**
-     * @throws ZxzHttpException
-     */
     protected function start()
     {
         if ($this->routeStrategy != 'job') {
@@ -67,7 +75,7 @@ class Router
 
             if (!is_dir($module_dir) || !is_readable($module_dir)) {
                 throw new ZxzHttpException(404,
-                    sprintf('DIR %s NOT FOUND OR PERMISSION DENIED', $this->module));
+                    sprintf('DIR %s NOT FOUND OR PERMISSION DENIED1', $this->module));
             }
 
             $file_path = CONTROLLER_PATH . SEPARATOR . $this->module . SEPARATOR . ucfirst($this->controller) . PHP_FILE;
@@ -86,12 +94,35 @@ class Router
                     sprintf('FILE %s NOT FOUND OR PERMISSION DENIED', $this->controller));
             }
 
+//            $reflect_class = new \ReflectionClass($namespace_path);
+//
+//            foreach ($reflect_class->getConstructor()->getParameters() as $class_param) {
+//                /**
+//                 * @var \ReflectionParameter $class_params
+//                 */
+//                $class_param = $class_param->getClass();
+//                $class_name = $class_param->getName();
+//                $class_obj =  new $class_name();
+//                if (method_exists($class_obj, 'register')) {
+//                    $class_obj->register(App::getInstance());
+//                }
+//
+//                ds(App::getInstance()->rootPath);
+//                    $this->iocClass[] = $class_obj;
+//            }
+//
+//
+//            die;
+
+
             $obj = new $namespace_path($this->app);
             if (!method_exists($obj, $this->action)) {
                 throw new ZxzHttpException(404,
                     sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
             }
-            $ret = $obj->{$this->action}();
+
+
+            $ret = $obj->{$this->action}(request());
 
         } else {
             $namespace_path = $this->controller;
@@ -100,6 +131,7 @@ class Router
                 throw new ZxzHttpException(404,
                     sprintf('Class %s CALL TO UNDEFINED METHOD %s', $this->controller, $this->action));
             }
+
             try {
                 $ret = $obj->{$this->action}(request(), ...$this->cli_params);
             } catch (\Exception $exception) {
@@ -108,8 +140,6 @@ class Router
         }
 
         $this->app->response_data = $ret;
-
-
     }
 
     public function strategyJudge()

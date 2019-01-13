@@ -8,7 +8,8 @@
 
 namespace Framework\Core;
 
-use Framework\App;
+use Framework\Handlers\ConfigHandler;
+use Framework\Handlers\EnvHandler;
 use Framework\Request;
 
 class Controller
@@ -21,21 +22,9 @@ class Controller
 
     }
 
-    public function handle(Request $request)
-    {
-        
-    }
+    public function __Construct(){
 
-    public function __construct()
-    {
-        $this->app = App::$container;
-//        static::__construct();
     }
-//
-//    public function callConstruct(){
-//        parent::__construct();
-
-//    }
 
     public function responseFalse($data = [], $msg = 'undefined error')
     {
@@ -44,7 +33,7 @@ class Controller
 
     public function responseTrue($data = [], $msg = 'success', $code = 200)
     {
-        return ['status' => true, 'msg' => $msg, 'data' => $data,  'code' => $code];
+        return ['status' => true, 'msg' => $msg, 'data' => $data, 'code' => $code];
     }
 
 }

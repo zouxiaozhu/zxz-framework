@@ -12,6 +12,8 @@ class Bb
     public function __construct()
     {
 
+        collect([])->pop()->shift()->toJson();
+
     }
 
     public function index()

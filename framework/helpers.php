@@ -6,11 +6,10 @@
  * Time: 下午4:13
  */
 
-if (!function_exists('env')) {
-    function env(string $name = '', $default = null)
+if (!function_exists('zenv')) {
+    function zenv(string $name = '', $default = null)
     {
         if (!$name) return null;
-
         $envInstance = \Framework\App::$container->getSingle('env');
         $value = $envInstance->env($name);
 
@@ -25,7 +24,7 @@ if (!function_exists('zxzLog')) {
         $file_name = date('Y-m-d') . '-' . $file_name;
 
         $dir = env('log_path') ?
-            RESOURCE_PATH . DIRECTORY_SEPARATOR . '/logs/' . env('log_path') : RESOURCE_PATH . '/logs';
+            RESOURCE_PATH . DIRECTORY_SEPARATOR . '/logs/' . zenv('log_path') : RESOURCE_PATH . '/logs';
 
         if (!is_dir($dir)) {
             exec("mkdir -p $dir && chmod -R 755 $dir");
@@ -71,6 +70,6 @@ if (!function_exists('zxzLogExp')) {
             'line' => $exception->getLine(),
             'file' => $exception->getFile()
         ], $file_name);
-        return ;
+        return;
     }
 }

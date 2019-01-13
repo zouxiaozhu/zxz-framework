@@ -10,11 +10,13 @@ namespace App\Console;
 
 use App\Console\Command\DirectPub;
 use App\Console\Command\Welcome;
+use App\controllers\mq\PubConfirm;
 
 class Kernel
 {
     public static $commands = [
         'welcome' => Welcome::class,
-        'direct_publish' => DirectPub::class
+        'direct_publish' => DirectPub::class,
+        'publish_confirm' => PubConfirm::class
     ];
 }

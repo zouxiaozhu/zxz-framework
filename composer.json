@@ -9,7 +9,13 @@
     "ext-pdo": "*",
     "php-amqplib/php-amqplib": "^2.8",
     "zl/composes": "dev-master",
-    "ext-amqp": "*"
+    "ext-amqp": "*",
+    "elasticsearch/elasticsearch": "^6.0",
+    "ext-pcntl": "*",
+    "ext-posix": "*",
+    "elasticquent/elasticquent": "dev-master",
+    "ext-openssl": "*",
+    "ext-mcrypt": "*"
   },
   "autoload": {
     "files": [

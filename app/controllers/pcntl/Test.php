@@ -8,8 +8,12 @@
 
 namespace App\controllers\pcntl;
 
+use Framework\Core\Controller;
 
-class Test
+class Test extends Controller
 {
+    public function test()
+    {
 
+    }
 }

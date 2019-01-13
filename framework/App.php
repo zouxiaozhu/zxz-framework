@@ -31,8 +31,6 @@ class App
 
     public function __construct($root, $loader)
     {
-
-
         $this->runningMode = php_sapi_name();
         // 根目录
 
@@ -97,5 +95,10 @@ class App
             $code,
             $msg
         );
+    }
+
+    public static function getInstance()
+    {
+        return self::$app;
     }
 }

@@ -20,6 +20,8 @@ class ConfigHandler implements HandleInterface
 
     public function __construct()
     {
+
+
 //        $this->loadHelper($app);
     }
 
@@ -29,6 +31,7 @@ class ConfigHandler implements HandleInterface
 
         App::$container->setSingle('config', $this);
         $this->loadHelper($app);
+
 
     }
 

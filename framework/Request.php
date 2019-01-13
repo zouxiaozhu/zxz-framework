@@ -155,7 +155,7 @@ class Request{
     }
 
     /**
-     * ｇeｔ函数
+     * 函数
      * @param string $name
      * @param string $default
      * @return null|string
@@ -163,15 +163,15 @@ class Request{
     public function get($name = '', $default = '')
     {
 
-        if(!isset($this->getParams[$name])){
+        if(!isset($this->requestParams[$name])){
             return null;
         }
 
-        if(empty($this->getParams[$name])){
+        if(empty($this->requestParams[$name])){
            return trim($default);
         }
 
-        return $this->getParams[$name] ?? null;
+        return $this->requestParams[$name] ?? null;
 
     }
 
