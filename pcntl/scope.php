@@ -33,4 +33,7 @@ $test = new test();
 
 $test->_test();
 
+
+// 结果居然是3  也就是$this 的作用域依然是test对象
+// 结果居然是3  也就是$this 的作用域依然是test对象
 // 结果居然是3  也就是$this 的作用域依然是test对象
