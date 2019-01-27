@@ -29,13 +29,13 @@ class pass extends Controller
         echo $publicKey;
         echo PHP_EOL;
         echo $out;
-      echo die;
+        echo die;
     }
 
     public function decrypt()
     {
-        openssl_public_encrypt('我是世界上最喜111111欢你的人',$crypted, openssl_pkey_get_public(file_get_contents('public.key')));
-        openssl_private_decrypt($crypted,$decrypted, openssl_pkey_get_private(file_get_contents('private.key')));
+        openssl_public_encrypt('我是世界上最喜111111欢你的人', $crypted, openssl_pkey_get_public(file_get_contents('public.key')));
+        openssl_private_decrypt($crypted, $decrypted, openssl_pkey_get_private(file_get_contents('private.key')));
 
         echo $decrypted;
         echo die;
@@ -49,8 +49,9 @@ class pass extends Controller
             'cost' => 11,
 
         ];
-        $pass = password_hash($str,PASSWORD_BCRYPT, $options);
-       $a =  password_verify($str ,$pass );
-       var_dump($a);die;
+        $pass = password_hash($str, PASSWORD_BCRYPT, $options);
+        $a = password_verify($str, $pass);
+        var_dump($a);
+        die;
     }
 }

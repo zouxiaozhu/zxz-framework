@@ -44,6 +44,7 @@ class DirectPub extends Controller
     }
 
     /**
+     * @throws \ErrorException
      * @throws \Zl\Compose\Mq\Exp\ConnectExp
      * @throws \Zl\Compose\Mq\Exp\RabbitMqExp
      */

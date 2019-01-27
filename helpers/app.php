@@ -114,3 +114,14 @@ if (!function_exists('report')) {
         $report->report($type, $content);
     }
 }
+
+if (!function_exists('zxz_path')) {
+    function zxz_path($path = '/')
+    {
+        $real_path = rtrim(ROOT_PATH, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . trim($path, DIRECTORY_SEPARATOR);
+        if (!realpath($real_path)) {
+            throw new ZxzHttpException(404, 'FILE NOT FOUND');
+        }
+        return $real_path;
+    }
+}

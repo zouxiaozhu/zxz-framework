@@ -65,14 +65,15 @@ class Wechat extends Controller
             'lati' => request('lati')
         ])->filter()->toArray();
         $where = [
-            'id' => (int) request('user_id'),
+            'id' => (int)request('user_id'),
         ];
+    }
 
     public function a()
     {
     }
 
-    public function updateUser(array $where,array $data)
+    public function updateUser(array $where, array $data)
     {
         return $this->userModel->updateOrCreate($where, $data);
     }

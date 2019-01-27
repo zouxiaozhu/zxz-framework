@@ -45,7 +45,10 @@ class Job extends Controller
                 'verbose' => false, // true 返回内容会多包含一层body、 影响内部逻辑 慎用
             ]
         ]);
-        return $this->responseTrue($a);
+        if ($_SERVER['REQUEST_METHOD'] != 'POST') {
+            return $this->responseTrue([false]);
+        }
+        return $this->responseFalse([true]);
     }
 
     public function create()
