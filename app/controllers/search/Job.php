@@ -9,6 +9,7 @@
 namespace App\controllers\search;
 
 use Framework\Core\Controller;
+use Framework\Exceptions\ZxzApiException;
 use Zl\Compose\Search\EsClient;
 
 /**
@@ -345,7 +346,14 @@ curl -X PUT "localhost:9200/search/_mapping/product" -H "Content-type: applicati
 
     public function clusterHealth()
     {
+
         $health = $this->es->clusterHealth();
+
         return $this->responseTrue($health);
+    }
+
+    public function createIndex()
+    {
+
     }
 }

@@ -42,9 +42,8 @@ class Load
                 $class_real_path = $file;
             }
         }
-
         if (!file_exists($class_real_path)) {
-            throw new ZxzHttpException('400', $class_path . 'not exist');
+            throw new ZxzHttpException('400', $class_real_path);
             return;
         }
 
