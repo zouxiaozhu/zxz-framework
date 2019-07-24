@@ -5,15 +5,19 @@
  * Date: 18-3-17
  * Time: 下午11:56
  */
+
 namespace Framework;
+
 use Framework\Exceptions\ZxzHttpException;
 
-class Facade {
+class Facade
+{
 
-    public static function __callStatic($method, $args){
+    public static function __callStatic($method, $args)
+    {
 
         $alias = static::getFacadeAccessor(); // config
-        $instance =  static::getInstance($alias);
+        $instance = static::getInstance($alias);
 
         switch (count($args)) {
             case 0:
@@ -27,13 +31,14 @@ class Facade {
         }
     }
 
-    public static  function getInstance($alias){
+    public static function getInstance($alias)
+    {
 
         $instance_map = App::$container->instanceMap;
 
-        if(!array_key_exists($alias, $instance_map)){
-            throw new ZxzHttpException(400, $alias.' instance not exist');
+        if (!array_key_exists($alias, $instance_map)) {
+            throw new ZxzHttpException(400, $alias . ' instance not exist');
         }
-        return  $instance_map[$alias];
+        return $instance_map[$alias];
     }
 }

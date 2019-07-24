@@ -15,7 +15,7 @@
     "ext-posix": "*",
     "elasticquent/elasticquent": "dev-master",
     "ext-openssl": "*",
-    "ext-mcrypt": "*"
+    "nmred/kafka-php": "v0.2.0.8"
   },
   "autoload": {
     "files": [

@@ -53,7 +53,7 @@ if (!function_exists('zxzLog')) {
         file_put_contents(
             $path,
             date('Y-m-d H:i:s') . " ----$method/$uri" . '[~ ' . getmygid() . '~]' .
-            '----- resq ' . $resq . PHP_EOL .
+            '----- req ' . $resq . PHP_EOL .
             '----- resp -----' . (is_string($data) ? $data . PHP_EOL : json_encode($data)) . PHP_EOL,
             FILE_APPEND
         );

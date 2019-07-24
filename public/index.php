@@ -13,10 +13,10 @@ define('DEBUG_MODE', true);
 
 if (DEBUG_MODE) {
     ini_set('display_errors', 'on');
-    error_reporting(E_ALL);
+    error_reporting(E_ERROR);
 } else {
     ini_set('display_errors', 'off');
-    error_reporting(0);
+    error_reporting(E_ERROR );
 }
 
 // 文件间隔符

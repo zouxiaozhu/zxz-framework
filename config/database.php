@@ -19,6 +19,17 @@ return [
                 'collation' => 'utf8_unicode_ci',
                 'prefix'=> '',
             ],
+            'defaults' =>[
+                'driver'=> 'mys2ql',
+                'host' => 'localho2st',
+                'database'=> 'fram2e',
+                'username' => 'roo2t',
+                'password' => '520025julanling222_2222I987',
+                'charset' => 'utf822',
+                'collation' => 'utf8_unicode_ci',
+                'prefix'=> '',
+            ],
 
         ]
+
     ];

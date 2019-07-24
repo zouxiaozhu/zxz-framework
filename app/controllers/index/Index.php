@@ -17,7 +17,7 @@ class Index extends Controller
     public function index()
     {
         $a = $this->test(1);
-        return $this->responseTrue([Config::get('database.default'), $a]);
+        return $this->responseTrue([Config::get('database.defaults'), $a]);
     }
 
 

@@ -46,9 +46,9 @@ class Job extends Controller
             ]
         ]);
         if ($_SERVER['REQUEST_METHOD'] != 'POST') {
-            return $this->responseTrue([false]);
+            return $this->responseTrue([$a]);
         }
-        return $this->responseFalse([true]);
+        return $this->responseFalse([$a]);
     }
 
     public function create()
@@ -137,12 +137,46 @@ class Job extends Controller
 
     public function search()
     {
-        $a = [
-            'index' => request('index'),
-            'type' => request('type'),
-            'q' => '9532'
-        ];
+        // 短语匹配 高亮效果
+//        $a = [
+//            'index' => request('index'),
+//            'type' => request('type'),
+//            'body' => [
+//                'query' => [
+//                    'match_phrase' => [
+//                        'text' => 'this out'
+//                    ]
+//                ],
+//
+//                'highlight' => [
+//                    'fields' => [
+//                        'text' => (object)[]
+//                    ]
+//                ]
+//            ],
+//
+//
+//        ];
 
+//        'body' => [
+//        'query' => [
+//
+//                        'filter' => [
+//                            'range' => [
+//                                'id' => ['gt' => 20]
+//                            ]
+//                        ],
+//
+//            'match' => [
+//                'name' => "0"
+//            ],
+//
+//
+//
+//
+//        ],
+//
+//    ],
 
 //        [
 //            'query' => [
@@ -260,5 +294,58 @@ class Job extends Controller
         $ret = $this->es->connect()->search($a);
 
         return $this->responseTrue($ret);
+    }
+
+
+    public function aggs()
+    {
+        $a = [
+            'index' => 'search',
+            'type' => 'product',
+            'body' => [
+                'aggs' => [
+                    'all_interests' => [
+                        'terms' => [
+                            'field' => 'url'
+                        ],
+                    ],
+                    'all_name' => [
+                        'terms' => [
+                            'field' => 'name'
+                        ]
+                    ]
+                ],
+                'query' => [
+                    'match' => [
+                        'android_url' => 22
+                    ]
+                ]
+            ]
+        ];
+        $ret = $this->es->connect()->search($a);
+        return $this->responseTrue($ret);
+    }
+
+    public function putProperty()
+    {
+
+        /*
+
+        index/_mapping/product
+curl -X PUT "localhost:9200/search/_mapping/product" -H "Content-type: application/json"  -d   '{
+  "properties": {
+    "url": {
+      "type":     "text",
+      "fielddata": true
+    }
+  }
+}'
+         */
+    }
+
+    public function clusterHealth()
+    {
+        $health = $this->es->clusterHealth();
+        return $this->responseTrue($health);
     }
 }
