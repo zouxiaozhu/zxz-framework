@@ -16,7 +16,6 @@ class Response
     public function success($response = [], $code = 200, $message = 'success')
     {
         header('Content-Type:Application/json; Charset=utf-8');
-
         echo json_encode([
             'code' => $code,
             'msg' => $message,
@@ -34,6 +33,19 @@ class Response
             'code' => $code,
             'msg' => $message,
             'result' => $response,
+            'status' => false
+        ], JSON_UNESCAPED_UNICODE);
+
+
+    }
+
+    public static function errorException(\Exception $exception)
+    {
+        header('Content-Type:Application/json; Charset=utf-8');
+        echo json_encode([
+            'code' => $exception->getCode(),
+            'msg' => $exception->getMessage(),
+            'result' => [],
             'status' => false
         ], JSON_UNESCAPED_UNICODE);
 

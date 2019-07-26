@@ -22,7 +22,8 @@ class Controller
 
     }
 
-    public function __construct(){
+    public function __construct()
+    {
 
     }
 
@@ -33,7 +34,7 @@ class Controller
 
     public function responseTrue($data = [], $msg = 'success', $code = 200)
     {
-        return ['status' => true, 'msg' => $msg, 'data' => $data, 'code' => $code];
+        return ['status' => true, 'msg' => $msg, 'data' =>$data, 'code' => $code];
     }
 
 }

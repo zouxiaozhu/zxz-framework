@@ -85,7 +85,7 @@ class App
 
         $method = $this->response_data['status'] ? 'success' : 'error';
         $code = (int) $this->response_data['code'] ?: '400';
-        $msg = (string) $this->response_data['msg'] ?: '';
+        $msg = (string) $this->response_data['msg'] ?: 'undefined error';
         $data = (array) $this->response_data['data'];
 
         zxzLog($this->response_data, 'response');

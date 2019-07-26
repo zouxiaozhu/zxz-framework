@@ -82,16 +82,7 @@ try {
     zxzLogExp($e);
     $e->response();
 } catch (Exception $e) {
-    $data = [
-        'code' => $e->getCode(),
-        'status' => false,
-        'msg' => $e->getMessage(),
-        'result' => [
-            'error_line' => $e->getLine(),
-            'trace' => $e->getTrace()
-        ]
-    ];
-
-    echo json_encode($data);die;
+    zxzLogExp($e);
+    \Framework\Response::errorException($e);
 }
 

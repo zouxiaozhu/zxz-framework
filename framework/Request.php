@@ -162,17 +162,11 @@ class Request{
      */
     public function get($name = '', $default = '')
     {
-
         if(!isset($this->requestParams[$name])){
-            return null;
+            return $default;
         }
 
-        if(empty($this->requestParams[$name])){
-           return trim($default);
-        }
-
-        return $this->requestParams[$name] ?? null;
-
+        return $this->requestParams[$name];
     }
 
 

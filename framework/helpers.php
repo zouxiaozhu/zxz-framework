@@ -10,6 +10,9 @@ if (!function_exists('zenv')) {
     function zenv(string $name = '', $default = null)
     {
         if (!$name) return null;
+        /**
+         *
+         */
         $envInstance = \Framework\App::$container->getSingle('env');
         $value = $envInstance->env($name);
 

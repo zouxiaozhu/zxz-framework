@@ -55,13 +55,14 @@ if (!function_exists('config')) {
 if (!function_exists('request')) {
     /**
      * @param string $item
+     * @param mixed $default
      *
      * @return \Framework\Request
      */
-    function request(string $item = '')
+    function request(string $item = '', $default = '')
     {
         if ($item) {
-            return app('request')->get($item);
+            return app('request')->get($item, $default);
         }
         return app('request');
     }

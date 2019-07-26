@@ -8,8 +8,9 @@
 
 namespace App\controllers\search;
 
+use Carbon\Carbon;
 use Framework\Core\Controller;
-use Framework\Exceptions\ZxzApiException;
+
 use Zl\Compose\Search\EsClient;
 
 /**
@@ -34,10 +35,7 @@ class Job extends Controller
 
     public function index()
     {
-        $es = new EsClient([
-            'host' => ['127.0.0.1:9200']
-        ]);
-        $a = $es->connect()->get([
+        $a = $this->es->get([
             'index' => request('index'),
             'type' => request('type'),
             'body' => [],
@@ -54,59 +52,78 @@ class Job extends Controller
 
     public function create()
     {
-        $es = new EsClient([
-            'host' => ['127.0.0.1:9200']
+        $insert = [
+            "id" => mt_rand(1, 10000000),
+            "name" => str_random(4),
+            "url" => str_random(4),
+            "description" => json_encode([1,2]),
+            "content" => str_random(46),
+            "pv" => mt_rand(10000, 10000000),
+            "status" => mt_rand(0, 1),
+            "created_at" => Carbon::now()->format('Y-m-d'),
+            "updated_at" => Carbon::now()->format('Y-m-d'),
+        ];
+
+        var_export(request('id', "111"));die;
+
+        $insertReturn = $this->es->create([
+            'index' => 'search',
+            'type' => 'product',
+            'id' => mt_rand(1, 100000000),
+            'op_type' => 'create',
+            'body' => $insert
         ]);
 
-        $insertReturn = $es->connect()->create([
-            'index' => request('index'),
-            'type' => request('type'),
-            'body' => json_encode([
-                "id" => mt_rand(1, 10000000),
-                "product_id" => mt_rand(1, 10000000),
-                "title" => '1165ctype2c27a+9532',
-                "description" => md5(mt_rand(1000000, 10000000)),
-                "content" => uniqid() . time() . time(),
-                "pv" => mt_rand(1000000, 10000000),
-                "status" => mt_rand(0, 1),
-                "created_at" => date('Y-m-d H:i:s'),
-                "updated_at" => date('Y-m-d H:i:s'),
-                'a' => mt_rand(1000000, 10000000),
-            ]),
-        ]);
+        $insertReturn['_source'] = $insert;
 
         return $this->responseTrue($insertReturn);
     }
 
     public function delete()
     {
-        $es = new EsClient([
-            'host' => ['127.0.0.1:9200']
-        ]);
-
-        $deleteReturn = $es->connect()->delete(
-            request('index'),
-            request('type'),
+        $deleteReturn = $this->es->delete(
+            'search',
+            'product',
             request('id')
         );
-
-        if ($deleteReturn) {
-            return $this->responseFalse($deleteReturn);
-        }
 
         return $this->responseTrue($deleteReturn);
     }
 
     public function exist()
     {
-        $es = new EsClient([
-            'host' => ['127.0.0.1:9200']
-        ]);
-
-        $existReturn = $es->connect()->exist(
-            request('index'),
-            request('type'),
+        /**
+         * op_type
+         * https://es.xiaoleilu.com/030_Data/30_Create.html
+         */
+        $existReturn = $this->es->exist(
+            'search',
+            'product',
             request('id')
+        );
+
+        if (!$existReturn) {
+            return $this->responseFalse(['exist' => false]);
+        }
+
+        return $this->responseTrue(['exist' => true]);
+    }
+
+    public function updateByVersion()
+    {
+        $updateData = [
+            "id" => mt_rand(1, 10000000),
+            "name" => str_random(3),
+            "title" => str_random(10), // my cat
+            '_id' => request('id'),
+        ];
+
+        $existReturn = $this->es->updateByVersion(
+            'search',
+            'product',
+            request('id'),
+            request('version'),
+            $updateData
         );
 
         if (!$existReturn) {
@@ -118,26 +135,99 @@ class Job extends Controller
 
     public function update()
     {
-        $existReturn = $this->es->connect()->update(
-            request('index'),
-            request('type'),
+        $updateData = [
+            "id" => mt_rand(1, 10000000),
+            "name" => str_random(3),
+            "title" => str_random(10), // my cat
+        ];
+
+        $existReturn = $this->es->update(
+            'search',
+            'product',
             request('id'),
-            [
-                "id" => mt_rand(1, 10000000),
-                "product_id" => mt_rand(1, 10000000),
-                "title" => strrev(uniqid()), // my cat
-            ]
+            $updateData
         );
 
         if (!$existReturn) {
             return $this->responseFalse($existReturn);
         }
 
-        return $this->responseTrue($existReturn);
+        return $this->responseTrue($updateData);
+    }
+
+    public function updateByScript()
+    {
+        $updateData = $this->es->updateByScript(
+            'search',
+            'product',
+            request('id'),
+            [
+                'script' => 'status += counter',
+                'params' => [
+                    'counter' => 10
+                ]
+            ]
+        );
+
+        if (!$updateData) {
+            return $this->responseFalse($updateData);
+        }
+
+        return $this->responseTrue($updateData);
+    }
+
+    public function lists()
+    {
+//       $this->es->search();
+    }
+
+    public function mGet()
+    {
+        // error
+        $mGetData =
+            [
+                'type' => 'product',
+                'index' => 'search',
+                'body' => [
+                    'docs' => [
+                        ['_id' => 26],
+                        ['_id' => 27]
+                    ]
+                ]
+            ];
+
+        $result = $this->es->mGet($mGetData);
+//
+//        $result = $this->es->mGet([
+//            'type' => 'product',
+//            'index' => 'search',
+//            'body' => ['ids' => [27, 26]],
+//            '_source' => ['sort', 'status']
+//        ]);
+
+
+        return $this->responseTrue($result);
+    }
+
+
+    public function sea()
+    {
+        $result = $this->es->get([
+            'index' => 'search',
+            'type' => 'product',
+            'id' => request('id'),
+            '_source_include' => [
+                'url', 'name'
+            ],
+        ]);
+
+
+        return $this->responseTrue($result);
     }
 
     public function search()
     {
+        $a = [];
         // 短语匹配 高亮效果
 //        $a = [
 //            'index' => request('index'),
@@ -346,7 +436,6 @@ curl -X PUT "localhost:9200/search/_mapping/product" -H "Content-type: applicati
 
     public function clusterHealth()
     {
-
         $health = $this->es->clusterHealth();
 
         return $this->responseTrue($health);
@@ -354,6 +443,17 @@ curl -X PUT "localhost:9200/search/_mapping/product" -H "Content-type: applicati
 
     public function createIndex()
     {
+        $indexData = [
+            'index' => 'test',
+            'body' => [
+                'settings' => [
+                    'number_of_shards' => 3,
+                    'number_of_replicas' => 1
+                ]
+            ]];
+
+        $this->es->createIndices($indexData);
+        return $this->responseTrue(true);
 
     }
 }
